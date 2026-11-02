@@ -8,6 +8,8 @@
 
 This is a deepening track for someone already developing C# services, not a beginner syntax course. Keep the focus on reasoning, experiments, tests, and documentation.
 
+Step-by-step procedures for Phase 2 experiments, implementation tasks, tests, and release work are in the [Phase 2 Lab and Guided Practice Workbook](../labs/phase-02-software-engineering-foundations.md). This schedule retains course sections, weekly time blocks, and task outcomes.
+
 ## Weekly cadence
 
 | Day | Duration | Format |
@@ -67,10 +69,10 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 **Skip:** advanced C# sections that are unrelated to the API. **Evidence:** allocation snapshots and first failing/passing domain test.
 
 - [ ] **Monday (1h):** Study CLR, JIT compilation, value vs reference types, stack vs heap.
-- [ ] **Tuesday (1h):** Write experiments with classes, structs, records, boxing, and reference assignment; explain results.
-- [ ] **Thursday (1.5h):** Study GC, `IDisposable`, and allocation; inspect an application with `dotnet-counters` or another profiler.
-- [ ] **Saturday (3h):** Create `dotnet-job-platform` with solution structure and Job domain model; scaffold the ASP.NET Core API, add one simple endpoint, run it, and verify the response manually.
-- [ ] **Sunday (1.5h):** Write the first Job model test; document runtime concepts and initial architecture decisions.
+- [ ] **Tuesday (1h):** Complete the value/reference, record, boxing, and allocation experiment in the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
+- [ ] **Thursday (1.5h):** Study GC and `IDisposable`; complete the local allocation/disposal inspection in the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
+- [ ] **Saturday (3h):** Create the `dotnet-job-platform` solution, Job domain model, and running ASP.NET Core API skeleton using the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
+- [ ] **Sunday (1.5h):** Add the first Job model test and document runtime concepts and initial architecture decisions using the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
 
 **Deliverables:** Running skeleton API with a manually verified endpoint, Job model and first test, `docs/architecture.md`, short runtime notes.
 
@@ -89,10 +91,10 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 **Skip:** completing the course's booking application. **Evidence:** `Result<T>` tests, database integration test, SQL query comparison.
 
 - [ ] **Monday (1h):** Study generics, delegates, events, lambdas, and expression-tree concepts.
-- [ ] **Tuesday (1h):** Implement and test a reusable `Result<T>` or small generic collection.
-- [ ] **Thursday (1.5h):** Study `IEnumerable<T>` vs `IQueryable<T>`, deferred execution, and LINQ performance; run examples.
-- [ ] **Saturday (3h):** Add job creation, retrieval, filtering, validation, and PostgreSQL persistence.
-- [ ] **Sunday (1.5h):** Add PostgreSQL integration tests using the documented test approach, inspect generated SQL, and document ORM/query trade-offs.
+- [ ] **Tuesday (1h):** Implement and test a reusable `Result<T>` or small generic collection using the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
+- [ ] **Thursday (1.5h):** Study `IEnumerable<T>` vs `IQueryable<T>` and deferred execution; run the comparison experiment in the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
+- [ ] **Saturday (3h):** Add job creation, retrieval, filtering, validation, and PostgreSQL persistence using the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
+- [ ] **Sunday (1.5h):** Add PostgreSQL integration tests, inspect generated SQL, and document ORM/query trade-offs using the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
 
 **Deliverables:** Working persistence, integration tests, a brief comparison of data-access approaches.
 
@@ -111,10 +113,10 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 **Skip:** extensive GUI/thread-affinity examples. **Evidence:** async vs thread experiment, bounded worker, cancellation test.
 
 - [ ] **Monday (1h):** Study `Task`, `async`/`await`, cancellation, and CPU-bound vs I/O-bound work.
-- [ ] **Tuesday (1h):** Compare synchronous and asynchronous file or HTTP calls; record results.
-- [ ] **Thursday (1.5h):** Study thread pools, `SemaphoreSlim`, `Channel<T>`, races, and bounded concurrency.
-- [ ] **Saturday (3h):** Add a background job processor with a bounded queue and cancellation support.
-- [ ] **Sunday (1.5h):** Test concurrency limits, cancellation, graceful shutdown, and failure cases.
+- [ ] **Tuesday (1h):** Compare synchronous and asynchronous file or HTTP calls using the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+- [ ] **Thursday (1.5h):** Study thread pools, `SemaphoreSlim`, `Channel<T>`, races, and bounded concurrency; run the workbook experiments in the [Week 3 section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+- [ ] **Saturday (3h):** Add the bounded background job processor and cancellation support using the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+- [ ] **Sunday (1.5h):** Test concurrency limits, cancellation, graceful shutdown, and failure cases using the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
 
 **Deliverables:** Bounded background worker, tests, short concurrency experiment report.
 
@@ -133,10 +135,10 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 **Skip:** blindly adopting MediatR or five project layers. **Evidence:** one justified architecture ADR and refactored modules.
 
 - [ ] **Monday (1h):** Study SOLID, cohesion, coupling, composition, and dependency inversion.
-- [ ] **Tuesday (1h):** Refactor a tightly coupled component into testable interfaces and implementations.
+- [ ] **Tuesday (1h):** Refactor a tightly coupled component into testable interfaces and implementations using the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
 - [ ] **Thursday (1.5h):** Study layered architecture, Clean Architecture trade-offs, DI lifetimes, and API boundaries.
-- [ ] **Saturday (3h):** Refactor the Job Management API into clear modules and add focused tests for the module boundaries.
-- [ ] **Sunday (1.5h):** Run the full test suite, write one ADR, create a diagram, and complete a month-one assessment.
+- [ ] **Saturday (3h):** Refactor the Job Management API into clear modules and add focused boundary tests using the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
+- [ ] **Sunday (1.5h):** Run the full test suite, write an ADR, create an architecture diagram, and complete the retrospective using the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
 
 **Deliverables:** Modular API, module tests, ADR, architecture diagram, retrospective.
 
@@ -189,10 +191,10 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 **Skip:** Blazor client/UI implementation. **Evidence:** OpenAPI contract, standardized errors, authorization tests.
 
 - [ ] **Monday (1h):** Study HTTP semantics (201/202/400/401/403/404/409), Problem Details, versioning, and dependency injection lifetimes.
-- [ ] **Tuesday (1h):** Create a small lab demonstrating singleton/scoped/transient behavior and an unsafe captive dependency; fix it.
-- [ ] **Thursday (1.5h):** Study authentication versus authorization, input validation, secrets management, and least privilege; draft a lightweight threat model.
-- [ ] **Saturday (3h):** Implement request DTOs, centralized validation/error responses, OpenAPI, authentication for protected operations, and authorization policies. Add API pagination if not complete.
-- [ ] **Sunday (1.5h):** Write integration tests for invalid inputs, 401/403, duplicate resource requests, and contract behavior; document trust boundaries.
+- [ ] **Tuesday (1h):** Create and correct the DI lifetime/captive-dependency lab using the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
+- [ ] **Thursday (1.5h):** Study authentication versus authorization, input validation, secrets management, and least privilege; draft the threat model using the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
+- [ ] **Saturday (3h):** Implement request DTOs, validation/error responses, OpenAPI, authentication, and authorization using the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security). Add pagination if not complete.
+- [ ] **Sunday (1.5h):** Write contract/security integration tests and document trust boundaries using the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
 
 **Deliverables:** Versioned API contract, validation tests, authorization policy, `docs/security.md`, and an updated OpenAPI specification.
 
@@ -211,10 +213,10 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 **Skip:** implementing patterns without a demonstrated need. **Evidence:** concurrency-safe job state changes, idempotency-key test, design trade-off note.
 
 - [ ] **Monday (1h):** Study database transaction boundaries, isolation levels, optimistic concurrency, and idempotency keys.
-- [ ] **Tuesday (1h):** Build a small concurrency experiment: two clients update the same job; observe lost updates and implement a version check.
+- [ ] **Tuesday (1h):** Build the two-client optimistic-concurrency experiment using the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
 - [ ] **Thursday (1.5h):** Study transient versus permanent errors, exponential backoff with jitter, timeouts, and why retries must respect idempotency.
-- [ ] **Saturday (3h):** Implement durable idempotency records for `POST /jobs`, a unique constraint for the key within its intended scope, job version checks, safe state transitions, and a bounded retry policy. Keep state and idempotency writes transactional.
-- [ ] **Sunday (1.5h):** Test repeated submissions, conflicting payloads for one key, concurrent updates, transaction rollback, and worker restart behavior.
+- [ ] **Saturday (3h):** Implement transactional idempotency, optimistic concurrency, safe state transitions, and bounded retries using the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
+- [ ] **Sunday (1.5h):** Test duplicate submissions, conflicting payloads, concurrent updates, rollback, and worker restart using the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
 
 **Deliverables:** Idempotent job creation, tested job state transitions, concurrency-safe updates, transaction tests, and `docs/decisions/ADR-00X-idempotency.md`.
 
@@ -233,10 +235,10 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 **Skip:** treating an old profiler walkthrough as current tooling guidance. **Evidence:** before/after performance measurements, trace/metric samples, failure test.
 
 - [ ] **Monday (1h):** Study structured logging, log levels, correlation IDs, OpenTelemetry traces, metrics, and useful service-level indicators.
-- [ ] **Tuesday (1h):** Use `dotnet-counters` or a profiler to inspect allocation, GC, CPU, and thread-pool behavior under a small workload.
-- [ ] **Thursday (1.5h):** Study health checks, readiness versus liveness, timeout budgets, retry storms, and graceful shutdown; identify anti-patterns in the project.
-- [ ] **Saturday (3h):** Add structured logs, request/job correlation, tracing, counters/histograms, health endpoints, timeout configuration, and a simple load-test script. Instrument the job lifecycle end to end.
-- [ ] **Sunday (1.5h):** Run baseline and failure-injection tests (database delay, worker interruption, duplicate requests). Record latency, throughput, memory, errors, and recovery results.
+- [ ] **Tuesday (1h):** Profile a repeatable small workload with `dotnet-counters`, a profiler, or BenchmarkDotNet using the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+- [ ] **Thursday (1.5h):** Study health checks, readiness versus liveness, timeout budgets, retry storms, and graceful shutdown; document project improvements using the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+- [ ] **Saturday (3h):** Add structured logs, correlation, tracing, metrics, health endpoints, timeouts, and a load-test script using the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+- [ ] **Sunday (1.5h):** Run baseline and failure-injection tests; record latency, throughput, memory, errors, and recovery using the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
 
 **Deliverables:** Telemetry dashboard or captured traces, `docs/operations.md`, benchmark results, and a failure-mode table.
 
@@ -248,17 +250,17 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 ### Week 8 — Course assignments
 
-**Monday (1h):** API → unit and integration-testing sections in the expanded outline. Optionally use TD → `Integration Testing - Testing the Data Access Layer` and `Using GitHub for Continuous Integration and Testing` → data-access integration tests and CI subsections. Read current GitHub Actions documentation and create the initial build workflow.
+**Monday (1h):** API → unit and integration-testing sections in the expanded outline. Optionally use TD → `Integration Testing - Testing the Data Access Layer` and `Using GitHub for Continuous Integration and Testing` → data-access integration tests and CI subsections. Read current GitHub Actions documentation; create the initial build workflow using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
 
 **Thursday (1.5h):** API → revisit the unit and integration-testing sections for state transitions and failures. Use TD → `Unit Testing - Application Core` or `Integration Testing - Testing the Data Access Layer` only for unresolved testing gaps, then review current GitHub Actions and .NET testing documentation.
 
 **Skip:** beginner GitHub account setup. **Evidence:** passing PR workflow, documented architectural review, final demonstration.
 
 - [ ] **Monday (1h):** Study test strategy (unit/integration/contract), code review, supply-chain security, and deployment/rollback basics.
-- [ ] **Tuesday (1h):** Review the API without AI: identify three design weaknesses, one reliability risk, and one test gap; create issues and fix the highest-impact item.
-- [ ] **Thursday (1.5h):** Add or refine GitHub Actions build, format/analyzer checks, unit tests, PostgreSQL integration tests, dependency scanning, and Docker build; verify a clean checkout works.
-- [ ] **Saturday (3h):** Finalize README, architecture and sequence diagrams, ADRs, API examples, Docker Compose setup, security/operations notes, and a 5–10 minute demo. Perform a deliberate worker-crash and recovery demonstration.
-- [ ] **Sunday (1.5h):** Complete the Phase 2 assessment below, write a retrospective, update the skill matrix, and decide which concepts need review before Phase 3 Scala/JVM.
+- [ ] **Tuesday (1h):** Review the API without AI, create issues, and fix the highest-impact item using the [Week 8 design-review procedure](../labs/phase-02-software-engineering-foundations.md#design-review-without-ai).
+- [ ] **Thursday (1.5h):** Add or refine CI, analyzers, unit/integration tests, dependency scanning, and Docker build; verify a clean checkout using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+- [ ] **Saturday (3h):** Finalize documentation, diagrams, ADRs, Docker Compose, and demo; perform the worker-crash/recovery demonstration using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+- [ ] **Sunday (1.5h):** Complete the Phase 2 assessment and retrospective, update the skill matrix, and identify concepts to review before Phase 3 using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
 
 **Deliverables:** Versioned release, green CI, runnable Docker setup, architecture pack, failure demo, and Phase 2 retrospective.
 

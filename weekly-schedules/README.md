@@ -5,4 +5,7 @@ Schedules are added one phase at a time, after completing the preceding phase an
 - [Phase 1 — Enterprise DBA Operations and HA/DR Bridge, 8 weeks](phase-01-enterprise-dba-bridge.md)
 - [Phase 2 — Software Engineering Foundations (C#), 8 weeks](phase-02-software-engineering-foundations.md)
 
+Phase 1 lab and tabletop instructions: [Enterprise DBA Lab Workbook](../labs/phase-01-enterprise-dba-bridge.md).
+Phase 2 labs and guided practice: [Software Engineering Foundations Workbook](../labs/phase-02-software-engineering-foundations.md).
+
 **Next:** Create the Phase 3 schedule after Phase 2 is complete.

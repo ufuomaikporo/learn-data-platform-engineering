@@ -28,7 +28,8 @@ This curriculum is tailored to an engineer with strong SQL/database experience a
 1. Score your baseline across the database platforms and operations skills in [05 — Study tracker](05-study-tracker.md).
 2. Start [Phase 1 — Enterprise DBA Operations and HA/DR Bridge](weekly-schedules/phase-01-enterprise-dba-bridge.md); select focused courses and authorized labs.
 3. Keep the study budget to 6–8 hours/week; the original software-engineering sequence begins in Month 3.
-4. Record what was studied, lab-tested, and performed in production as separate evidence categories.
+4. Use the [Phase 1 Lab Workbook](labs/phase-01-enterprise-dba-bridge.md) for lab, guided-exercise, and tabletop procedures.
+5. Record what was studied, lab-tested, and performed in production as separate evidence categories.
 
 ## Scope and reality check
 
@@ -38,3 +39,6 @@ A 26-month curriculum is an **educational plan**, not a guarantee of a Staff or 
 ## Phase 1 weekly schedule
 
 Weekly schedules are kept in [`weekly-schedules/`](weekly-schedules/). Start with [`Phase 1 — Enterprise DBA Operations and HA/DR Bridge`](weekly-schedules/phase-01-enterprise-dba-bridge.md) (8 weeks / 64 hours), followed by [`Phase 2 — Software Engineering Foundations`](weekly-schedules/phase-02-software-engineering-foundations.md) (8 weeks / 64 hours).
+
+Phase 1's lab, guided-exercise, and tabletop procedures are in the [Phase 1 Lab Workbook](labs/phase-01-enterprise-dba-bridge.md).
+Phase 2's implementation and guided-practice procedures are in the [Phase 2 Lab Workbook](labs/phase-02-software-engineering-foundations.md).
