@@ -35,7 +35,17 @@ README.md
 
 **Evidence:** API contract, architecture review, test report, concurrency explanation.
 
-## P2 — Python Ingestion and Validation SDK
+## P2 — Scala/JVM Foundations
+
+**Purpose:** Build practical Scala and JVM fluency early, with a small deliverable that does not depend on Python.
+
+**Stack:** Scala version compatible with the target Spark runtime, sbt, Scala test framework, Apache Spark.
+
+**Requirements:** typed domain model; immutable transformations; case classes and pattern matching; Options/Eithers; unit tests; a small Spark DataFrame transformation; explain plan inspection; documented JVM/runtime observations.
+
+**Evidence:** reproducible sbt build, test report, short explanation of type and collection choices, and Spark execution plan.
+
+## P3 — Python Ingestion and Validation SDK
 
 **Purpose:** Demonstrate production Python rather than notebook-only experience.
 
@@ -47,7 +57,7 @@ README.md
 
 **Evidence:** package installation guide, coverage, profiling, performance report.
 
-## P3 — Dependency-Aware Scheduler
+## P4 — Dependency-Aware Scheduler
 
 **Purpose:** Demonstrate CS fundamentals and algorithmic reasoning.
 
@@ -57,7 +67,7 @@ README.md
 
 **Evidence:** complexity table, property tests, benchmark and design rationale.
 
-## P4 — Scala/PySpark/Spark SQL Benchmark
+## P5 — Scala/PySpark/Spark SQL Benchmark
 
 **Purpose:** Separate language overhead from distributed execution cost.
 
@@ -69,7 +79,7 @@ README.md
 
 **Critical insight:** Scala does not automatically outperform PySpark when both produce equivalent optimized physical plans. Explain where Python UDF or driver-side code changes the comparison.
 
-## P5 — Event-Driven Validation Platform
+## P6 — Event-Driven Validation Platform
 
 **Purpose:** Demonstrate distributed-system correctness and resilience.
 
@@ -83,7 +93,7 @@ README.md
 
 **Evidence:** event catalogue, sequence diagrams, recovery tests, SLO draft, security review.
 
-## P6 — Metadata-Driven Lakehouse and Scale Lab
+## P7 — Metadata-Driven Lakehouse and Scale Lab
 
 **Purpose:** Demonstrate practical petabyte-scale design without petabyte-scale spending.
 
@@ -97,7 +107,7 @@ README.md
 
 **Evidence:** benchmark notebook, physical plans, architecture decision on Delta vs Iceberg, cost model, lineage example.
 
-## P7 — Streaming Analytics
+## P8 — Streaming Analytics
 
 **Purpose:** Demonstrate correctness of continuous distributed data processing.
 
@@ -109,7 +119,7 @@ README.md
 
 **Evidence:** end-to-end lag metrics, checkpoint recovery demo, semantics explanation.
 
-## P8 — Cloud Platform and Reliability
+## P9 — Cloud Platform and Reliability
 
 **Purpose:** Demonstrate operations, security and infrastructure as code.
 
@@ -121,7 +131,7 @@ README.md
 
 **Evidence:** runbooks, DR exercise, cost estimate, operational review.
 
-## P9 — Governed AI Data Platform Assistant
+## P10 — Governed AI Data Platform Assistant
 
 **Purpose:** Demonstrate applied AI engineering with data-platform governance.
 

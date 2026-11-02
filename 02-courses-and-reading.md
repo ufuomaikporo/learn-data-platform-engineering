@@ -9,10 +9,10 @@ Select **one primary course per subject**, then use books, official docs and lab
 | Phase | Udemy search phrases | What the course must teach | Essential complementary resource |
 |---|---|---|---|
 | C# engineering | `advanced C# .NET async concurrency`; `ASP.NET Core integration testing clean architecture` | runtime, async, DI, testing, API, security | Microsoft Learn: C#/.NET/ASP.NET Core docs; *A Philosophy of Software Design* |
+| Scala/JVM | `Scala 2 functional programming`; `Scala Spark DataFrame`; `JVM performance garbage collection` | types, immutability, sbt, JVM, Spark APIs | Scala docs; Spark Scala API; JVM tooling docs |
 | Python | `advanced Python type hints pytest packaging`; `Python data engineering PyArrow Polars` | packaging, typing, testing, generators, profiling | Python docs; *Effective Python*; pytest docs |
 | Algorithms | `data structures algorithms C#`; `graphs Big O` | complexity, heaps, hash tables, graph traversal | *Grokking Algorithms*; *A Common-Sense Guide to Data Structures and Algorithms* |
 | OS/networking | `operating systems processes virtual memory`; `networking backend engineers TCP TLS` | processes, memory, I/O, TCP, DNS, TLS | *Operating Systems: Three Easy Pieces* (free); *Computer Networking: A Top-Down Approach* |
-| Scala/JVM | `Scala 2 functional programming`; `Scala Spark DataFrame`; `JVM performance garbage collection` | types, immutability, sbt, JVM, Spark APIs | Scala docs; Spark Scala API; JVM tooling docs |
 | Distributed systems | `distributed systems design`; `Kafka outbox saga microservices` | failure models, consistency, messaging, idempotency | *Designing Data-Intensive Applications* |
 | Spark/lakehouse | `Apache Spark performance optimization`; `Delta Lake internals`; `Apache Iceberg` | physical plans, shuffles, storage and metadata | Spark, Parquet, Delta, Iceberg and Trino official docs |
 | Streaming | `Apache Kafka fundamentals`; `Apache Flink stateful stream processing` | partitions, offsets, windows, checkpoints | Kafka and Flink official docs; *Streaming Systems* |

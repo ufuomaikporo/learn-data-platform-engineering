@@ -30,14 +30,14 @@ Score 0 = unfamiliar, 1 = conceptual, 2 = guided practice, 3 = independent, 4 = 
 
 - [ ] M01: Repository template, CI and first .NET domain model
 - [ ] M02: Job API tests, security, telemetry and ADR
-- [ ] M03: Python packaging, typing, pytest and CLI
-- [ ] M04: Python ingestion SDK, benchmarks and release
-- [ ] M05: DSA foundations and complexity practice
-- [ ] M06: Graph scheduler, tests and explanation
-- [ ] M07: OS, memory, threading and I/O experiments
-- [ ] M08: Network failure lab and bounded processor
-- [ ] M09: Scala types, collections, FP and sbt
-- [ ] M10: Scala/PySpark/SQL performance comparison
+- [ ] M03: Scala types, collections, FP and sbt
+- [ ] M04: JVM fundamentals and Spark Scala API exercise
+- [ ] M05: Python packaging, typing, pytest and CLI
+- [ ] M06: Python ingestion SDK, benchmarks and release
+- [ ] M07: DSA foundations and complexity practice
+- [ ] M08: Graph scheduler, tests and explanation
+- [ ] M09: OS, memory, threading and I/O experiments
+- [ ] M10: Network failure lab and bounded processor; extend Spark comparison
 - [ ] M11: Messaging and idempotency
 - [ ] M12: Outbox/inbox, retries and workflow design
 - [ ] M13: Failure-injected distributed validation platform

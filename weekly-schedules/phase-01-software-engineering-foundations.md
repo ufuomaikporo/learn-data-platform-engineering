@@ -41,8 +41,8 @@ The two primary courses do not fully teach idempotency, optimistic concurrency, 
 
 | Week | Course sections to use | Approx. guided-study time |
 |---|---|---:|
-| 1 | **CS:** fundamentals, OOP, exceptions, collections. **HP (optional):** memory measurement. **TD (optional):** TDD foundations. | 1.5–2 h |
-| 2 | **CS:** generics and LINQ. **API:** project setup, first endpoint, and manual API testing. **HP (optional):** benchmarking or EF Core performance. **TD (optional):** application-core unit testing. | 1.5–2 h |
+| 1 | **CS:** fundamentals, OOP, exceptions, collections. **API:** project setup, first endpoint, and manual API testing. **HP (optional):** memory measurement. **TD (optional):** TDD foundations. | 1.5–2 h |
+| 2 | **CS:** generics and LINQ. **API:** persistence and data-access testing. **HP (optional):** benchmarking or EF Core performance. **TD (optional):** application-core unit testing. | 1.5–2 h |
 | 3 | **CS:** async/await and cancellation. **MT (optional):** task-based asynchronous programming and async/await. **API:** REST design, endpoints, and persistence. | 1.5–2 h |
 | 4 | **CS:** async and multithreading review. **API:** service boundaries and testing. **CA (optional):** SOLID and application core. **DP (optional):** SOLID principles. | 1.5–2 h |
 | 5 | **API:** validation, errors, middleware, Identity, JWT, and authorization. **CA (optional):** API structure and security. | 1.5–2 h |
@@ -62,19 +62,19 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 **Monday (1h):** CS → `C# Fundamentals`, `Basics of Object-Oriented Programming`, and `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` → types, records, value/reference semantics, and OOP subsections. Read Microsoft documentation on the CLR/JIT for the remaining time.
 
-**Thursday (1.5h):** CS → `Exceptions and error handling` and `Collections` → exception, interface, and collection subsections. Optionally use HP → `Measure Performance During Development Part 1` → memory measurement, or TD → `Getting Started with Test Driven Development` → Red-Green-Refactor, to create the test project. Use the remaining time to inspect a small sample with `dotnet-counters` or another profiler.
+**Thursday (1.5h):** CS → `Exceptions and error handling` and `Collections` → exception, interface, and collection subsections. API → `Project setup and overview`, `Defining the first endpoint`, and `Testing the API manually` → scaffold the API and verify a simple endpoint. Optionally use TD → `Getting Started with Test Driven Development` → Red-Green-Refactor, to create the test project. Defer profiling until the API is running if needed.
 
 **Skip:** advanced C# sections that are unrelated to the API. **Evidence:** allocation snapshots and first failing/passing domain test.
 
 - [ ] **Monday (1h):** Study CLR, JIT compilation, value vs reference types, stack vs heap.
 - [ ] **Tuesday (1h):** Write experiments with classes, structs, records, boxing, and reference assignment; explain results.
 - [ ] **Thursday (1.5h):** Study GC, `IDisposable`, and allocation; inspect an application with `dotnet-counters` or another profiler.
-- [ ] **Saturday (3h):** Create `dotnet-job-platform` with solution structure, Job domain model, and initial endpoints.
-- [ ] **Sunday (1.5h):** Write Job state-transition tests; document runtime concepts and initial architecture decisions.
+- [ ] **Saturday (3h):** Create `dotnet-job-platform` with solution structure and Job domain model; scaffold the ASP.NET Core API, add one simple endpoint, run it, and verify the response manually.
+- [ ] **Sunday (1.5h):** Write the first Job model test; document runtime concepts and initial architecture decisions.
 
-**Deliverables:** Running skeleton API, first tests, `docs/architecture.md`, short runtime notes.
+**Deliverables:** Running skeleton API with a manually verified endpoint, Job model and first test, `docs/architecture.md`, short runtime notes.
 
-**Self-check:** Can you explain why a reference type does not necessarily imply every value lives on the heap, and when disposal differs from garbage collection?
+**Self-check:** Can you start the API and verify its endpoint, explain why a reference type does not necessarily imply every value lives on the heap, and describe when disposal differs from garbage collection?
 
 ## Week 2 — Generics, LINQ, and persistence
 
@@ -84,7 +84,7 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 **Monday (1h):** CS → `Generic types & advanced use of methods` and `LINQ` → generics, delegates, lambdas, and LINQ subsections. Supplement with current Microsoft documentation for expression trees and query translation.
 
-**Thursday (1.5h):** API → `Project setup and overview`, `Defining the first endpoint`, and `Testing the API manually` → project structure, endpoint, and API-testing subsections. Optionally use HP → `Measure Performance During Development Part 2` → BenchmarkDotNet or `Data Access Performance: Entity Framework Core`, and TD → `Unit Testing - Application Core`. Adapt the tests to job persistence and review EF Core query behavior.
+**Thursday (1.5h):** API → persistence, EF Core, and data-access testing sections in the expanded outline. Optionally use HP → `Measure Performance During Development Part 2` → BenchmarkDotNet or `Data Access Performance: Entity Framework Core`, and TD → `Unit Testing - Application Core`. Read the ASP.NET Core integration-testing and Testcontainers documentation; adapt the examples to PostgreSQL job persistence and review EF Core query behavior.
 
 **Skip:** completing the course's booking application. **Evidence:** `Result<T>` tests, database integration test, SQL query comparison.
 
@@ -92,7 +92,7 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 - [ ] **Tuesday (1h):** Implement and test a reusable `Result<T>` or small generic collection.
 - [ ] **Thursday (1.5h):** Study `IEnumerable<T>` vs `IQueryable<T>`, deferred execution, and LINQ performance; run examples.
 - [ ] **Saturday (3h):** Add job creation, retrieval, filtering, validation, and PostgreSQL persistence.
-- [ ] **Sunday (1.5h):** Add PostgreSQL integration tests, inspect SQL, and document ORM/query trade-offs.
+- [ ] **Sunday (1.5h):** Add PostgreSQL integration tests using the documented test approach, inspect generated SQL, and document ORM/query trade-offs.
 
 **Deliverables:** Working persistence, integration tests, a brief comparison of data-access approaches.
 
@@ -128,17 +128,17 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 **Monday (1h):** CS → `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` → interfaces and dependency inversion subsections. Optionally use CA → `Preliminary Concepts` → SOLID and dependency inversion, or DP → `The SOLID Design Principles`. Supplement with Microsoft dependency-injection documentation.
 
-**Thursday (1.5h):** API → `Project setup and overview` and the testing sections in the expanded outline → service boundaries and testing. Optionally use CA → `Setting up the Application Core` and `Setting up Infrastructure Projects` → application/infrastructure boundaries. Use the remaining time to compare layered and vertical-slice approaches for the Job API.
+**Thursday (1.5h):** API → review the project-structure and testing sections in the expanded outline, focusing on service boundaries and test placement. Optionally use CA → `Setting up the Application Core` and `Setting up Infrastructure Projects` → application/infrastructure boundaries. Use the remaining time to compare layered and vertical-slice approaches for the Job API.
 
 **Skip:** blindly adopting MediatR or five project layers. **Evidence:** one justified architecture ADR and refactored modules.
 
 - [ ] **Monday (1h):** Study SOLID, cohesion, coupling, composition, and dependency inversion.
 - [ ] **Tuesday (1h):** Refactor a tightly coupled component into testable interfaces and implementations.
 - [ ] **Thursday (1.5h):** Study layered architecture, Clean Architecture trade-offs, DI lifetimes, and API boundaries.
-- [ ] **Saturday (3h):** Refactor the Job Management API into clear modules; implement and test a job lifecycle state machine.
+- [ ] **Saturday (3h):** Refactor the Job Management API into clear modules and add focused tests for the module boundaries.
 - [ ] **Sunday (1.5h):** Run the full test suite, write one ADR, create a diagram, and complete a month-one assessment.
 
-**Deliverables:** Modular API, state-machine tests, ADR, architecture diagram, retrospective.
+**Deliverables:** Modular API, module tests, ADR, architecture diagram, retrospective.
 
 **Self-check:** Can you explain why each module boundary exists, what alternatives you rejected, and which abstractions may be unnecessary?
 
@@ -156,6 +156,7 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 - [ASP.NET Core dependency injection](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection)
 - [EF Core concurrency handling](https://learn.microsoft.com/en-us/ef/core/saving/concurrency)
 - [EF Core transactions](https://learn.microsoft.com/en-us/ef/core/saving/transactions)
+- [ASP.NET Core integration tests](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests)
 - [ASP.NET Core health checks](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks)
 - [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/)
 - [Testcontainers for .NET](https://dotnet.testcontainers.org/)
@@ -215,7 +216,7 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 - [ ] **Saturday (3h):** Implement durable idempotency records for `POST /jobs`, a unique constraint for the key within its intended scope, job version checks, safe state transitions, and a bounded retry policy. Keep state and idempotency writes transactional.
 - [ ] **Sunday (1.5h):** Test repeated submissions, conflicting payloads for one key, concurrent updates, transaction rollback, and worker restart behavior.
 
-**Deliverables:** Idempotent job creation, concurrency-safe updates, transaction tests, and `docs/decisions/ADR-00X-idempotency.md`.
+**Deliverables:** Idempotent job creation, tested job state transitions, concurrency-safe updates, transaction tests, and `docs/decisions/ADR-00X-idempotency.md`.
 
 **Self-check:** Can you explain why a retry can be safe for a read but unsafe for a write, and how a database constraint protects against a race that an application-level check cannot?
 
@@ -257,7 +258,7 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 - [ ] **Tuesday (1h):** Review the API without AI: identify three design weaknesses, one reliability risk, and one test gap; create issues and fix the highest-impact item.
 - [ ] **Thursday (1.5h):** Add or refine GitHub Actions build, format/analyzer checks, unit tests, PostgreSQL integration tests, dependency scanning, and Docker build; verify a clean checkout works.
 - [ ] **Saturday (3h):** Finalize README, architecture and sequence diagrams, ADRs, API examples, Docker Compose setup, security/operations notes, and a 5–10 minute demo. Perform a deliberate worker-crash and recovery demonstration.
-- [ ] **Sunday (1.5h):** Complete the Phase 1 assessment below, write a retrospective, update the skill matrix, and decide which concepts need review before Phase 2 Python.
+- [ ] **Sunday (1.5h):** Complete the Phase 1 assessment below, write a retrospective, update the skill matrix, and decide which concepts need review before Phase 2 Scala/JVM.
 
 **Deliverables:** Versioned release, green CI, runnable Docker setup, architecture pack, failure demo, and Phase 1 retrospective.
 
@@ -285,4 +286,4 @@ At the end of each week, capture one engineering decision: **context → alterna
 
 ### Definition of done
 
-Do not chase feature count. A small, robust API with demonstrated tests, clear boundaries, recovery behavior, and architectural reasoning is stronger evidence than an overbuilt service. Move to Phase 2 (Python) once the essential gates are met; carry optional enhancements into a backlog.
+Do not chase feature count. A small, robust API with demonstrated tests, clear boundaries, recovery behavior, and architectural reasoning is stronger evidence than an overbuilt service. Move to Phase 2 (Scala/JVM) once the essential gates are met; carry optional enhancements into a backlog.

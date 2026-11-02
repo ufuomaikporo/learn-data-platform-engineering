@@ -17,10 +17,10 @@ Track C runs continuously: **one written design or leadership artifact every mon
 | Months | Phase | Technical outcomes | Proof of learning |
 |---|---|---|---|
 | 1–2 | 1. Software engineering foundations in C# | OOP, SOLID, modular design, .NET runtime, async, DI, testing, APIs, observability | Job Management API with tests and ADRs |
-| 3–4 | 2. Production Python | Type hints, pytest, packaging, generators, async, profiling, PyArrow/Polars, FastAPI | Installable ingestion/validation package |
-| 5–6 | 3. Algorithms and CS reasoning | Big-O, hashes, trees, heaps, graphs, BFS/DFS, topological sort, recursion | Dependency scheduler and complexity report |
-| 7–8 | 4. OS, networks and concurrency | Processes, memory, I/O, locks, backpressure, TCP, DNS, TLS, HTTP | Bounded file processor and network failure lab |
-| 9–10 | 5. Scala, JVM and functional programming | Scala collections, immutability, types, pattern matching, sbt, JVM/GC, Spark Scala API | Scala/PySpark/SQL benchmark |
+| 3–4 | 2. Scala, JVM and functional programming | Scala collections, immutability, types, pattern matching, sbt, JVM/GC, Spark Scala API | Typed Scala project and Spark API exercise |
+| 5–6 | 3. Production Python | Type hints, pytest, packaging, generators, async, profiling, PyArrow/Polars, FastAPI | Installable ingestion/validation package |
+| 7–8 | 4. Algorithms and CS reasoning | Big-O, hashes, trees, heaps, graphs, BFS/DFS, topological sort, recursion | Dependency scheduler and complexity report |
+| 9–10 | 5. OS, networks and concurrency | Processes, memory, I/O, locks, backpressure, TCP, DNS, TLS, HTTP | Bounded file processor and network failure lab |
 | 11–13 | 6. Distributed systems and architecture | Messaging, idempotency, outbox, consistency, replication, partitions, sagas | Event-driven validation platform |
 | 14–16 | 7. Petabyte-scale data foundations | Spark plans/shuffles/skew, Parquet/Arrow, Delta/Iceberg, Trino, storage economics, incremental data | Metadata-driven lakehouse and performance report |
 | 17–18 | 8. Streaming systems | Kafka, event time, windows, state, checkpoints, Flink vs Structured Streaming | Streaming pipeline with replay and late events |
@@ -30,7 +30,7 @@ Track C runs continuously: **one written design or leadership artifact every mon
 
 ### Accelerated 18-month alternative
 
-Combine Months 1–4 into three months if C# and Python baseline is strong; combine algorithms and OS/networking into three months; cover Scala and Spark together in three months; combine streaming with distributed systems; overlap Kubernetes with the capstone. **Do not remove** architecture writing, failure tests, or AI evaluation. If workload becomes unsustainable, return to the 24-month pace.
+Combine Months 1–4 into three months if the C# and Scala baselines are strong; combine algorithms and OS/networking into three months; combine streaming with distributed systems; overlap Kubernetes with the capstone. **Do not remove** architecture writing, failure tests, or AI evaluation. If workload becomes unsustainable, return to the 24-month pace.
 
 ## Phase 1 — Software engineering foundations (C# as the vehicle)
 
@@ -40,29 +40,29 @@ Study: value/reference semantics, generics, async/await, cancellation, garbage c
 
 **Lab:** Job Management API with PostgreSQL, idempotency keys, optimistic concurrency, retries, cancellation, integration tests and CI. **Gate:** explain every architectural boundary and diagnose a concurrency failure without AI assistance.
 
-## Phase 2 — Production Python
+## Phase 2 — Scala and JVM
+
+Study: Scala version compatible with your Spark runtime, immutable collections, case classes, traits, pattern matching, higher-order functions, Options/Eithers, futures, sbt, JVM classloading, GC, serialization, executors, DataFrame/Dataset APIs.
+
+**Lab:** Build a typed Scala project with immutable transformations, tests and sbt; use the Spark Scala API to inspect a basic execution plan. After Phase 3, extend it with equivalent PySpark and Spark SQL transformations and compare physical plans, Python UDF overhead, serialization, shuffle and memory. **Gate:** explain JVM and Scala trade-offs and when Scala helps. Do not assume Scala is faster for equivalent built-in Spark expressions.
+
+## Phase 3 — Production Python
 
 Study: data model, iterators/generators, decorators, context managers, type hints, mypy/pyright, virtual environments, `pyproject.toml`, packaging, pytest, fixtures, logging, configuration, async, multiprocessing, GIL implications, memory profiling, pandas, Polars, PyArrow, FastAPI.
 
 **Lab:** Publish a locally installable Python package with a CLI and API for streaming ingestion, schema validation, checkpointing and manifests. **Gate:** clean install, typed public API, tests, performance benchmark, reproducible build.
 
-## Phase 3 — Algorithms and CS reasoning
+## Phase 4 — Algorithms and CS reasoning
 
 Study: Big-O, memory complexity, arrays, stacks, queues, hash tables, trees, heaps, graphs, sorting, binary search, BFS/DFS, topological sorting, cycle detection, greedy and dynamic programming basics; sets, logic and probability as needed.
 
 **Lab:** Dependency-aware scheduler with priority queue and cycle detection. **Gate:** document time/space complexity and explain trade-offs.
 
-## Phase 4 — OS, networking and concurrency
+## Phase 5 — OS, networking and concurrency
 
 Study: processes vs threads, scheduling, virtual memory, paging, file systems, I/O, durability, locking, deadlocks, bounded queues, backpressure, sockets, TCP, DNS, TLS, proxies, load balancing, connection pooling, HTTP, OAuth/OIDC.
 
 **Lab:** Streaming file processor; compare sequential, async, bounded and unbounded parallel modes; inject latency, DNS, TLS and connection-pool failures. **Gate:** explain measured bottlenecks.
-
-## Phase 5 — Scala and JVM
-
-Study: Scala version compatible with your Spark runtime, immutable collections, case classes, traits, pattern matching, higher-order functions, Options/Eithers, futures, sbt, JVM classloading, GC, serialization, executors, DataFrame/Dataset APIs.
-
-**Lab:** Equivalent transformations in PySpark, Scala and Spark SQL. Compare physical plans, Python UDF overhead, built-in functions, serialization, shuffle and memory. **Gate:** explain when Scala helps and when it does not. Do not assume Scala is faster for equivalent built-in Spark expressions.
 
 ## Phase 6 — Distributed systems
 
@@ -112,10 +112,10 @@ At 6 hours/week, reduce lecture time and project scope, **not** tests or design 
 
 ## Quarterly gates
 
-- **Q1:** Production .NET service with tests and documented design.
-- **Q2:** Python package + algorithms evidence.
-- **Q3:** OS/network failure analysis + Scala/JVM fundamentals.
-- **Q4:** Distributed workflow with tested idempotency and recovery.
+- **Q1:** Production .NET service with tests and documented design; begin Scala/JVM fundamentals.
+- **Q2:** Scala/JVM lab + Python package evidence.
+- **Q3:** Algorithms evidence + OS/network experiments.
+- **Q4:** OS/network failure analysis + tested messaging and recovery.
 - **Q5:** Spark/lakehouse performance and storage-layout evidence.
 - **Q6:** Streaming correctness + reliable platform deployment.
 - **Q7:** AI retrieval evaluation, security and observability.
