@@ -31,7 +31,7 @@ README.md
 
 **Evidence:** Cross-platform architecture comparison, lab/version notes, Oracle recovery and HA runbooks, SQL Server Always On/failover decision tree, Azure SQL service-selection and migration brief, Db2 comparison, tuning/RCA report, ExaCC boundary diagram, and a skills matrix distinguishing studied, lab-tested, and production experience.
 
-**Limits:** Do not imply that a single-instance lab demonstrates RAC, Always On, or ExaCC production operations. Use only systems and data you are authorized to access. Production experience, on-call ownership, mentorship, and the posting's stated years requirement remain separate gaps.
+**Limits:** Do not imply that a single-instance lab demonstrates RAC, Always On, or ExaCC production operations. Use only systems and data you are authorized to access. Production experience, on-call ownership, mentorship, and senior-level years-of-experience requirements remain separate gaps.
 
 ## P1 — Job Management API (.NET)
 

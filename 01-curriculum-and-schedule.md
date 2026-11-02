@@ -35,7 +35,7 @@ Keep the eight-week Oracle bridge intact if the target role is time-sensitive. C
 
 ## Phase 1 — Enterprise DBA operations and HA/DR bridge
 
-**Why this comes first:** Target postings exposed technical gaps across Oracle high availability and recovery, SQL Server Always On, Azure SQL, Db2, database lifecycle operations, and cross-platform incident response. Spend the first eight weeks on a broad DBA bridge; keep ExaCC to a focused architecture and operations module rather than letting it dominate the phase.
+**Why this comes first:** Enterprise DBA roles commonly require depth across Oracle high availability and recovery, SQL Server Always On, cloud database services, database lifecycle operations, and cross-platform incident response. Spend the first eight weeks building reusable DBA fundamentals; keep ExaCC to a focused architecture and operations module rather than letting it dominate the phase.
 
 **Study:** Oracle architecture, multitenant administration, RMAN restore/recovery validation, OEM, patching, RAC/ASM and Data Guard; SQL Server Always On, backup/restore, performance diagnosis and security; Azure SQL service models, monitoring and migration; Db2 architecture and operational fundamentals; Windows/Linux administration, scripting, capacity planning, incident/root-cause analysis, change management and operational documentation. Include GoldenGate as an orientation topic. Cover OCI tenancy/IAM/network foundations and Exadata/ExaCC architecture, service boundaries and lifecycle in a bounded module.
 

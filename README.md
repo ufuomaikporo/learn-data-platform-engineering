@@ -1,6 +1,6 @@
 # Staff / Principal Data & AI Platform Engineer — Learning Roadmap
 
-**Duration:** 20–26 months · **Effort:** 6–8 hours/week · **Primary outcome:** technical depth plus evidence of cross-team architectural influence. The first eight weeks prioritize enterprise DBA operations and HA/DR gaps across Oracle, SQL Server, Azure SQL, and Db2, with a focused ExaCC module.
+**Duration:** 20–26 months · **Effort:** 6–8 hours/week · **Primary outcome:** technical depth plus evidence of cross-team architectural influence. The first eight weeks build reusable enterprise DBA operations and HA/DR skills across Oracle, SQL Server, Azure SQL, and Db2, with a focused ExaCC module.
 
 This curriculum is tailored to an engineer with strong SQL/database experience and practical Azure, .NET, Spark, and data-platform exposure. It is **not** a beginner programming bootcamp. It addresses foundational gaps while developing skills for staff-level architecture and principal-level technical strategy.
 
@@ -25,7 +25,7 @@ This curriculum is tailored to an engineer with strong SQL/database experience a
 
 ## Starting this week
 
-1. Score both the general and Oracle-specific baselines in [05 — Study tracker](05-study-tracker.md).
+1. Score your baseline across the database platforms and operations skills in [05 — Study tracker](05-study-tracker.md).
 2. Start [Phase 1 — Enterprise DBA Operations and HA/DR Bridge](weekly-schedules/phase-01-enterprise-dba-bridge.md); select focused courses and authorized labs.
 3. Keep the study budget to 6–8 hours/week; the original software-engineering sequence begins in Month 3.
 4. Record what was studied, lab-tested, and performed in production as separate evidence categories.

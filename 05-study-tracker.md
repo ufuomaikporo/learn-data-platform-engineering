@@ -8,14 +8,14 @@ Score 0 = unfamiliar, 1 = conceptual, 2 = guided practice, 3 = independent, 4 = 
 
 | Skill | Start (0–4) | 6 months | 12 months | 18 months | Final |
 |---|---|---|---|---|---|
-| Oracle DBA / RMAN / OEM operations | | | | | |
-| Oracle RAC / ASM / Data Guard | | | | | |
-| Exadata / ExaCC architecture | | | | | |
-| SQL Server Always On / backup / recovery | | | | | |
-| Azure SQL services / migration | | | | | |
-| Db2 operational fundamentals | | | | | |
-| Cross-platform tuning / security / automation | | | | | |
-| Incident RCA / change management / runbooks | | | | | |
+| Oracle DBA / RMAN / OEM operations | 3 | | | | |
+| Oracle RAC / ASM / Data Guard | 1 | | | | |
+| Exadata / ExaCC architecture | 0 | | | | |
+| SQL Server Always On / backup / recovery | 1 | | | | |
+| Azure SQL services / migration | 0 | | | | |
+| Db2 operational fundamentals | 0 | | | | |
+| Cross-platform tuning / security / automation | 0 | | | | |
+| Incident RCA / change management / runbooks | 0 | | | | |
 | SQL and database internals | 3 | | | | |
 | C#/.NET engineering | 2 | | | | |
 | Python engineering | 2 | | | | |

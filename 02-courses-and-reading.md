@@ -6,7 +6,7 @@
 
 Select **one primary course per subject**, then use books, official docs and labs to fill gaps. Subscription inclusion varies by region and plan; verify availability and course freshness before starting. For fast-moving tools, prefer recent course updates and current official documentation. Avoid copy-along courses with no testing or design decisions.
 
-For the enterprise DBA bridge, do not attempt every overlapping course. Prioritize Oracle and SQL Server HA/DR, then select targeted Azure SQL, Db2, and ExaCC sections. Prefer labs and operational runbooks over exam-only material. Courses cannot establish senior production ownership, on-call experience, or the posting's years requirement.
+For the enterprise DBA bridge, do not attempt every overlapping course. Prioritize Oracle and SQL Server HA/DR, then select targeted Azure SQL, Db2, and ExaCC sections. Prefer labs and operational runbooks over exam-only material. Courses cannot establish senior production ownership, on-call experience, or years of professional experience.
 
 | Phase | Udemy search phrases | What the course must teach | Essential complementary resource |
 |---|---|---|---|
