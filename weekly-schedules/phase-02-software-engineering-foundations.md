@@ -1,10 +1,10 @@
-# Phase 1 — Complete Eight-Week Study Schedule
+# Phase 2 — Complete Eight-Week Study Schedule
 
 **Track:** Software Engineering Foundations using C#  
 **Time:** 8 weeks × 8 hours = 64 hours  
 **Outcome:** A production-minded Job Management API with PostgreSQL, idempotency, optimistic concurrency, security, testing, CI, observability, and architecture evidence.
 
-**Scope:** This is Phase 1 (Months 1–2) of the 24-month Staff/Principal roadmap. Weeks 1–4 are retained from the original schedule; Weeks 5–8 complete the phase.
+**Scope:** This is Phase 2 (Months 3–4) of the 26-month Staff/Principal roadmap. Weeks 1–4 are retained from the original schedule; Weeks 5–8 complete the phase.
 
 This is a deepening track for someone already developing C# services, not a beginner syntax course. Keep the focus on reasoning, experiments, tests, and documentation.
 
@@ -258,15 +258,15 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 - [ ] **Tuesday (1h):** Review the API without AI: identify three design weaknesses, one reliability risk, and one test gap; create issues and fix the highest-impact item.
 - [ ] **Thursday (1.5h):** Add or refine GitHub Actions build, format/analyzer checks, unit tests, PostgreSQL integration tests, dependency scanning, and Docker build; verify a clean checkout works.
 - [ ] **Saturday (3h):** Finalize README, architecture and sequence diagrams, ADRs, API examples, Docker Compose setup, security/operations notes, and a 5–10 minute demo. Perform a deliberate worker-crash and recovery demonstration.
-- [ ] **Sunday (1.5h):** Complete the Phase 1 assessment below, write a retrospective, update the skill matrix, and decide which concepts need review before Phase 2 Scala/JVM.
+- [ ] **Sunday (1.5h):** Complete the Phase 2 assessment below, write a retrospective, update the skill matrix, and decide which concepts need review before Phase 3 Scala/JVM.
 
-**Deliverables:** Versioned release, green CI, runnable Docker setup, architecture pack, failure demo, and Phase 1 retrospective.
+**Deliverables:** Versioned release, green CI, runnable Docker setup, architecture pack, failure demo, and Phase 2 retrospective.
 
 **Self-check:** Can you defend your design choices and explain the runtime, transaction, concurrency, and reliability behavior without consulting AI-generated notes?
 
 ---
 
-## Phase 1 final acceptance criteria
+## Phase 2 final acceptance criteria
 
 - [ ] `POST /jobs` accepts an idempotency key and avoids duplicate jobs on retries.
 - [ ] `GET /jobs/{id}` and job history endpoints return consistent status information.
@@ -286,4 +286,4 @@ At the end of each week, capture one engineering decision: **context → alterna
 
 ### Definition of done
 
-Do not chase feature count. A small, robust API with demonstrated tests, clear boundaries, recovery behavior, and architectural reasoning is stronger evidence than an overbuilt service. Move to Phase 2 (Scala/JVM) once the essential gates are met; carry optional enhancements into a backlog.
+Do not chase feature count. A small, robust API with demonstrated tests, clear boundaries, recovery behavior, and architectural reasoning is stronger evidence than an overbuilt service. Move to Phase 3 (Scala/JVM) once the essential gates are met; carry optional enhancements into a backlog.

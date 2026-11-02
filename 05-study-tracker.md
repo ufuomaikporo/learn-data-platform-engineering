@@ -8,6 +8,14 @@ Score 0 = unfamiliar, 1 = conceptual, 2 = guided practice, 3 = independent, 4 = 
 
 | Skill | Start (0–4) | 6 months | 12 months | 18 months | Final |
 |---|---|---|---|---|---|
+| Oracle DBA / RMAN / OEM operations | | | | | |
+| Oracle RAC / ASM / Data Guard | | | | | |
+| Exadata / ExaCC architecture | | | | | |
+| SQL Server Always On / backup / recovery | | | | | |
+| Azure SQL services / migration | | | | | |
+| Db2 operational fundamentals | | | | | |
+| Cross-platform tuning / security / automation | | | | | |
+| Incident RCA / change management / runbooks | | | | | |
 | SQL and database internals | 3 | | | | |
 | C#/.NET engineering | 2 | | | | |
 | Python engineering | 2 | | | | |
@@ -28,30 +36,32 @@ Score 0 = unfamiliar, 1 = conceptual, 2 = guided practice, 3 = independent, 4 = 
 
 ## Monthly milestone checklist
 
-- [ ] M01: Repository template, CI and first .NET domain model
-- [ ] M02: Job API tests, security, telemetry and ADR
-- [ ] M03: Scala types, collections, FP and sbt
-- [ ] M04: JVM fundamentals and Spark Scala API exercise
-- [ ] M05: Python packaging, typing, pytest and CLI
-- [ ] M06: Python ingestion SDK, benchmarks and release
-- [ ] M07: DSA foundations and complexity practice
-- [ ] M08: Graph scheduler, tests and explanation
-- [ ] M09: OS, memory, threading and I/O experiments
-- [ ] M10: Network failure lab and bounded processor; extend Spark comparison
-- [ ] M11: Messaging and idempotency
-- [ ] M12: Outbox/inbox, retries and workflow design
-- [ ] M13: Failure-injected distributed validation platform
-- [ ] M14: Spark plans, shuffles, joins and skew
-- [ ] M15: Parquet, Delta, Iceberg and distributed SQL
-- [ ] M16: Lakehouse metadata, quality, lineage and benchmark
-- [ ] M17: Kafka topics, schemas, offsets and event time
-- [ ] M18: Flink/Structured Streaming state and recovery
-- [ ] M19: Kubernetes deployment and secure configuration
-- [ ] M20: Terraform, SLOs, tracing, restore and cost model
-- [ ] M21: LLM APIs, embeddings, retrieval and RAG
-- [ ] M22: Evaluation, AI security, observability and audit
-- [ ] M23: Integrated capstone and architecture RFC
-- [ ] M24: Demo, peer review, Staff-readiness assessment
+- [ ] M01: Oracle and SQL Server operations baseline; RMAN recovery and OEM; SQL Server HA/DR map
+- [ ] M02: RAC/ASM, Data Guard, Always On, Azure SQL, Db2 orientation, tuning and ExaCC overview
+- [ ] M03: Repository template, CI and first .NET domain model
+- [ ] M04: Job API tests, security, telemetry and ADR
+- [ ] M05: Scala types, collections, FP and sbt
+- [ ] M06: JVM fundamentals and Spark Scala API exercise
+- [ ] M07: Python packaging, typing, pytest and CLI
+- [ ] M08: Python ingestion SDK, benchmarks and release
+- [ ] M09: DSA foundations and complexity practice
+- [ ] M10: Graph scheduler, tests and explanation
+- [ ] M11: OS, memory, threading and I/O experiments
+- [ ] M12: Network failure lab and bounded processor; extend Spark comparison
+- [ ] M13: Messaging and idempotency
+- [ ] M14: Outbox/inbox, retries and workflow design
+- [ ] M15: Failure-injected distributed validation platform
+- [ ] M16: Spark plans, shuffles, joins and skew
+- [ ] M17: Parquet, Delta, Iceberg and distributed SQL
+- [ ] M18: Lakehouse metadata, quality, lineage and benchmark
+- [ ] M19: Kafka topics, schemas, offsets and event time
+- [ ] M20: Flink/Structured Streaming state and recovery
+- [ ] M21: Kubernetes deployment and secure configuration
+- [ ] M22: Terraform, SLOs, tracing, restore and cost model
+- [ ] M23: LLM APIs, embeddings, retrieval and RAG
+- [ ] M24: Evaluation, AI security, observability and audit
+- [ ] M25: Integrated capstone and architecture RFC
+- [ ] M26: Demo, peer review, Staff-readiness assessment
 
 ## Weekly study template
 

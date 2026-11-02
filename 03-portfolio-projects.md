@@ -23,6 +23,16 @@ scripts/
 README.md
 ```
 
+## P0 — Enterprise DBA Operations and HA/DR Readiness Lab
+
+**Purpose:** Front-load evidence for enterprise DBA technical gaps across Oracle and SQL Server, with Azure SQL and Db2 orientation. ExaCC is a bounded architecture module, not the project's center. This is a learning lab and operations pack, not a claim of senior production ownership.
+
+**Scope:** Practice Oracle RMAN recovery and, where authorized environments permit, RAC/ASM or Data Guard scenarios. Practice or document SQL Server Always On, backup/restore, and failover; compare Azure SQL service models, monitoring, security, and migration paths; and produce a Db2 operational comparison. Include monitoring, least privilege, patching, scripting, incident RCA, change controls, and a short ExaCC architecture/service-boundary overview.
+
+**Evidence:** Cross-platform architecture comparison, lab/version notes, Oracle recovery and HA runbooks, SQL Server Always On/failover decision tree, Azure SQL service-selection and migration brief, Db2 comparison, tuning/RCA report, ExaCC boundary diagram, and a skills matrix distinguishing studied, lab-tested, and production experience.
+
+**Limits:** Do not imply that a single-instance lab demonstrates RAC, Always On, or ExaCC production operations. Use only systems and data you are authorized to access. Production experience, on-call ownership, mentorship, and the posting's stated years requirement remain separate gaps.
+
 ## P1 — Job Management API (.NET)
 
 **Purpose:** Demonstrate transferable software engineering fundamentals using a familiar language.
