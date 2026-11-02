@@ -21,32 +21,36 @@ This is a deepening track for someone already developing C# services, not a begi
 
 ## Udemy course key and section selection
 
-These are **selected sections**, not a requirement to complete five courses. Course content can change; use the section *titles* to find material if numbering shifts. Sections were checked against public Udemy curricula in October 2026.
+Use **two primary courses**, then fill the project-specific gaps with Microsoft documentation and experiments. Course content can change; use section titles rather than fixed lecture numbers. Sections were checked against public Udemy curricula in October 2026.
 
 | Code | Course | Instructor | Link |
 |---|---|---|---|
-| **HP** | High Performance Coding with .NET Core and C# | Gergely Kalapos | [Udemy](https://www.udemy.com/course/high-performance-coding-with-net-core-and-csharp/) |
-| **MA** | Master Multithreading & Asynchronous Programming in C#/.NET | Frank Liu | [Udemy](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) |
-| **CA** | ASP.NET Core - SOLID and Clean Architecture | Trevoir Williams | [Udemy](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) |
-| **TD** | Test Driven Development in ASP.NET Core - The Handbook | Trevoir Williams | [Udemy](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) |
-| **DP** | Design Patterns in C# and .NET | Dmitri Nesteruk | [Udemy](https://www.udemy.com/course/design-patterns-csharp-dotnet/) |
+| **CS** | Ultimate C# Masterclass for 2027 | Elegant Code | [Udemy](https://www.udemy.com/course/ultimate-csharp-masterclass/) |
+| **API** | Building ASP.NET Core REST APIs with an AI-Powered Workflow | Elegant Code | [Udemy](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) |
+| **MT** *(optional)* | Master Multithreading & Asynchronous Programming in C#/.NET | Frank Liu | [Udemy](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) |
+| **HP** *(optional)* | High Performance Coding with .NET Core and C# | Gergely Kalapos | [Udemy](https://www.udemy.com/course/high-performance-coding-with-net-core-and-csharp/) |
+| **TD** *(optional)* | Test Driven Development in ASP.NET Core - The Handbook | Trevoir Williams | [Udemy](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) |
+| **CA** *(optional)* | ASP.NET Core - SOLID and Clean Architecture | Trevoir Williams | [Udemy](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) |
+| **DP** *(optional)* | Design Patterns in C# and .NET | Dmitri Nesteruk | [Udemy](https://www.udemy.com/course/design-patterns-csharp-dotnet/) |
 
-**Selection rules:** Approximately **1.5–2 hours of video/documentation per week**, with **6–6.5 hours spent coding, testing, profiling, and explaining decisions**. Watch the specified lectures within a section, not necessarily every lecture. Where a subject is not taught adequately by these courses, use the linked Microsoft documentation. HP is based on older .NET versions: use it for enduring performance principles, but follow current .NET guidance for tools and APIs. Course exercises are optional; implement the concepts in **your own Job Management API** instead.
+**Selection rules:** Approximately **1.5–2 hours of video/documentation per week**, with **6–6.5 hours spent coding, testing, profiling, and explaining decisions**. Watch only the relevant sections. The API course directly covers PostgreSQL, EF Core, authentication, authorization, unit testing, and integration testing. Its AI-assisted workflow is optional; do not use generated code as a substitute for understanding. Course exercises are optional; implement the concepts in **your own Job Management API** instead.
+
+The two primary courses do not fully teach idempotency, optimistic concurrency, worker recovery, Testcontainers, OpenTelemetry, Docker, or CI. Learn those through the Microsoft documentation links below and the experiments in this schedule. **MT, HP, TD, CA, and DP are optional specialist material**, not additional required courses. Choose at most one optional supplement for a study session, and use it only when a specific concept needs more explanation; project implementation and failure tests take priority over watching more videos.
 
 ## Week-by-week course map
 
 | Week | Course sections to use | Approx. guided-study time |
 |---|---|---:|
-| 1 | **HP:** *Setting the Stage* (overview only); *Measure Performance During Development Part 1* (especially **Measuring Memory** and profiler lectures). **TD:** *Getting Started with Test Driven Development* (create test project and first test). | 1.5–2 h |
-| 2 | **HP:** *Measure Performance During Development Part 2* (**Micro Benchmarking with BenchmarkDotNet**, selected lectures); sections addressing **collections, value/reference types, and EF Core data-access performance** (select by topic). **TD:** *Unit Testing - Application Core* (mocking and business rules). | 1.5–2 h |
-| 3 | **MA:** *Introduction* (**CPU, Thread and Thread Scheduler**, **Basic syntax to start a thread**); sections on **Tasks / Task Parallel Library** and **async/await** (select task lifecycle, exception/cancellation, async fundamentals). | 1.5–2 h |
-| 4 | **CA:** *Preliminary Concepts* (**Review of S.O.L.I.D Principles**, **Dependency Inversion**, **Understanding Clean Architecture**); **DP:** *The SOLID Design Principles* (especially OCP, ISP, DIP). | 1.5–2 h |
-| 5 | **CA:** sections on **validation**, **custom exceptions/global error handling**, **middleware**, and **JWT/Identity**; locate by lecture title in the current course curriculum. | 1.5–2 h |
-| 6 | **CA:** sections on **CQRS/MediatR**, **application services**, and **EF Core/persistence** (selectively). **DP:** sections on **Strategy**, **State**, or **Decorator**, as relevant to the job lifecycle. | 1.5–2 h |
-| 7 | **HP:** *Measure Performance During Development Part 1* and *Part 2* (CPU, memory, profiling, benchmarking); production-monitoring lectures. **MA:** *Threads Synchronization* (critical sections, locking), then concurrent collections/cancellation lectures as needed. | 1.5–2 h |
-| 8 | **TD:** *Using GitHub for Continuous Integration and Testing* (**Protect main/master Branch**, **Create GitHub Build Action**, **Finalizing Continuous Integration Action**); revisit **TD: Unit Testing - Application Core** for test gaps. | 1.5–2 h |
+| 1 | **CS:** fundamentals, OOP, exceptions, collections. **HP (optional):** memory measurement. **TD (optional):** TDD foundations. | 1.5–2 h |
+| 2 | **CS:** generics and LINQ. **API:** project setup, first endpoint, and manual API testing. **HP (optional):** benchmarking or EF Core performance. **TD (optional):** application-core unit testing. | 1.5–2 h |
+| 3 | **CS:** async/await and cancellation. **MT (optional):** task-based asynchronous programming and async/await. **API:** REST design, endpoints, and persistence. | 1.5–2 h |
+| 4 | **CS:** async and multithreading review. **API:** service boundaries and testing. **CA (optional):** SOLID and application core. **DP (optional):** SOLID principles. | 1.5–2 h |
+| 5 | **API:** validation, errors, middleware, Identity, JWT, and authorization. **CA (optional):** API structure and security. | 1.5–2 h |
+| 6 | **API:** EF Core, persistence, unit testing, and integration testing. **CA (optional):** infrastructure and testing. **DP (optional):** State and Strategy. | 1.5–2 h |
+| 7 | **CS:** performance and concurrency. **MT (optional):** synchronization and concurrent collections. **HP (optional):** profiling and production monitoring. | 1.5–2 h |
+| 8 | **API:** testing review. **TD (optional):** integration testing and GitHub Actions CI. Supplement with current GitHub Actions, Docker, and .NET CI documentation. | 1.5–2 h |
 
-**Important:** For courses where Udemy's section titles are not reliably exposed in public previews, the map deliberately identifies **topics or lecture titles rather than inventing exact section names/numbers**. You can locate these by expanding the course's *Course content* panel.
+The detailed weekly assignments below contain the specific Udemy section and subsection names. Use section titles rather than fixed lecture numbers because course content can change.
 
 ## Detailed weekly course assignments
 
@@ -56,11 +60,11 @@ These are **selected sections**, not a requirement to complete five courses. Cou
 
 ### Week 1 — Course assignments
 
-**Monday (1h):** HP → *Setting the Stage*: Course Overview (skim), then *Measure Performance During Development Part 1*: **Measuring Memory**. Read Microsoft documentation on value/reference types and CLR/JIT for the remaining time.
+**Monday (1h):** CS → `C# Fundamentals`, `Basics of Object-Oriented Programming`, and `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` → types, records, value/reference semantics, and OOP subsections. Read Microsoft documentation on the CLR/JIT for the remaining time.
 
-**Thursday (1.5h):** HP → *Measure Performance During Development Part 1*: **Visual Studio Performance Tools - PerfTips and Profiler** and **The Diagnostic Tools Window**. TD → *Getting Started with Test Driven Development*: **Create Test Project** (as needed). Use the remaining time to profile allocations in a small sample.
+**Thursday (1.5h):** CS → `Exceptions and error handling` and `Collections` → exception, interface, and collection subsections. Optionally use HP → `Measure Performance During Development Part 1` → memory measurement, or TD → `Getting Started with Test Driven Development` → Red-Green-Refactor, to create the test project. Use the remaining time to inspect a small sample with `dotnet-counters` or another profiler.
 
-**Skip:** HP's historical .NET Core 2.0 deployment details. **Evidence:** allocation snapshots and first failing/passing domain test.
+**Skip:** advanced C# sections that are unrelated to the API. **Evidence:** allocation snapshots and first failing/passing domain test.
 
 - [ ] **Monday (1h):** Study CLR, JIT compilation, value vs reference types, stack vs heap.
 - [ ] **Tuesday (1h):** Write experiments with classes, structs, records, boxing, and reference assignment; explain results.
@@ -78,9 +82,9 @@ These are **selected sections**, not a requirement to complete five courses. Cou
 
 ### Week 2 — Course assignments
 
-**Monday (1h):** HP → *Measure Performance During Development Part 2*: **Micro Benchmarking with BenchmarkDotNet**. Supplement with current Microsoft docs for generics, expression trees, and LINQ.
+**Monday (1h):** CS → `Generic types & advanced use of methods` and `LINQ` → generics, delegates, lambdas, and LINQ subsections. Supplement with current Microsoft documentation for expression trees and query translation.
 
-**Thursday (1.5h):** TD → *Unit Testing - Application Core*: **Create Booking Services**, **Unit Test: Save a Room Booking**, and **Unit Test: Check if Room Is Available** (adapt patterns to job persistence). Review HP's relevant EF Core/data-access performance lectures if time remains.
+**Thursday (1.5h):** API → `Project setup and overview`, `Defining the first endpoint`, and `Testing the API manually` → project structure, endpoint, and API-testing subsections. Optionally use HP → `Measure Performance During Development Part 2` → BenchmarkDotNet or `Data Access Performance: Entity Framework Core`, and TD → `Unit Testing - Application Core`. Adapt the tests to job persistence and review EF Core query behavior.
 
 **Skip:** completing the course's booking application. **Evidence:** `Result<T>` tests, database integration test, SQL query comparison.
 
@@ -100,9 +104,9 @@ These are **selected sections**, not a requirement to complete five courses. Cou
 
 ### Week 3 — Course assignments
 
-**Monday (1h):** MA → *Introduction*: **CPU, Thread and Thread Scheduler**, **Basic syntax to start a thread**, **Why threading: Offload long running tasks**. Contrast this with async I/O using Microsoft async guidance.
+**Monday (1h):** CS → `.NET under the hood` → async/await and task fundamentals. If the distinction is unclear, use MT → `Task based Asynchronous Programming` and `Async & Await` → task execution and async/await basics. Contrast asynchronous I/O with threads using Microsoft async guidance.
 
-**Thursday (1.5h):** MA → course sections covering **Tasks**, **async/await**, **task cancellation**, and **exceptions** (select lectures, not entire sections). If time remains, MA → *Threads Synchronization*: **Critical Section and Atomic Operation**.
+**Thursday (1.5h):** CS → `.NET under the hood` → cancellation, task exceptions, and multithreading subsections. Optionally use MT → `Threads Synchronization` → critical sections and thread safety. Supplement with Microsoft guidance on `SemaphoreSlim`, `Channel<T>`, and hosted services.
 
 **Skip:** extensive GUI/thread-affinity examples. **Evidence:** async vs thread experiment, bounded worker, cancellation test.
 
@@ -122,9 +126,9 @@ These are **selected sections**, not a requirement to complete five courses. Cou
 
 ### Week 4 — Course assignments
 
-**Monday (1h):** CA → *Preliminary Concepts*: **Review of S.O.L.I.D Principles**, **Dependency Inversion**, **Understanding Clean Architecture**.
+**Monday (1h):** CS → `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` → interfaces and dependency inversion subsections. Optionally use CA → `Preliminary Concepts` → SOLID and dependency inversion, or DP → `The SOLID Design Principles`. Supplement with Microsoft dependency-injection documentation.
 
-**Thursday (1.5h):** DP → *The SOLID Design Principles*: **Open-Closed Principle**, **Interface Segregation Principle**, **Dependency Inversion Principle**. Use remaining time to compare layered and vertical-slice approaches for the Job API.
+**Thursday (1.5h):** API → `Project setup and overview` and the testing sections in the expanded outline → service boundaries and testing. Optionally use CA → `Setting up the Application Core` and `Setting up Infrastructure Projects` → application/infrastructure boundaries. Use the remaining time to compare layered and vertical-slice approaches for the Job API.
 
 **Skip:** blindly adopting MediatR or five project layers. **Evidence:** one justified architecture ADR and refactored modules.
 
@@ -146,8 +150,17 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 - [C# documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
 - [.NET garbage collection fundamentals](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals)
 - [Asynchronous programming](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)
+- [Worker services in .NET](https://learn.microsoft.com/en-us/dotnet/core/extensions/workers)
+- [ASP.NET Core hosted services](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)
 - [.NET diagnostics](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/)
 - [ASP.NET Core dependency injection](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection)
+- [EF Core concurrency handling](https://learn.microsoft.com/en-us/ef/core/saving/concurrency)
+- [EF Core transactions](https://learn.microsoft.com/en-us/ef/core/saving/transactions)
+- [ASP.NET Core health checks](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks)
+- [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/)
+- [Testcontainers for .NET](https://dotnet.testcontainers.org/)
+- [Containerize a .NET application](https://learn.microsoft.com/en-us/dotnet/core/docker/introduction)
+- [Build and test .NET with GitHub Actions](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net)
 - Selected chapters: *Effective C#* and *A Philosophy of Software Design*.
 
 ## End-of-month assessment
@@ -168,9 +181,9 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 ### Week 5 — Course assignments
 
-**Monday (1h):** CA → current course sections covering **validation**, **custom exceptions**, and **global error-handling middleware**. Find matching lecture titles in the Udemy outline.
+**Monday (1h):** API → validation, error handling, middleware, and Problem Details sections in the expanded outline. If more detail is needed, use CA → `Creating the API project` → custom exceptions, global error handling, and middleware subsections. Match the current lecture titles rather than relying on lecture numbers.
 
-**Thursday (1.5h):** CA → sections covering **Identity/JWT security** and **API documentation**. Supplement with current ASP.NET Core authorization and problem-details documentation.
+**Thursday (1.5h):** API → Identity, JWT, authorization, and API documentation sections in the expanded outline. Optionally use CA → `Securing API and UI` → JWT and Identity subsections. Supplement with current ASP.NET Core authorization and Problem Details documentation.
 
 **Skip:** Blazor client/UI implementation. **Evidence:** OpenAPI contract, standardized errors, authorization tests.
 
@@ -190,9 +203,9 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 ### Week 6 — Course assignments
 
-**Monday (1h):** CA → sections covering **CQRS/MediatR**, **application-layer boundaries**, and **EF Core**. Focus on architectural trade-offs rather than copying the course stack.
+**Monday (1h):** API → EF Core, persistence, and application-layer sections in the expanded outline. Optionally use CA → `Setting up the Application Core` and `Setting up Infrastructure Projects` → application core, infrastructure, and EF Core subsections. Focus on architectural trade-offs rather than copying either course's stack.
 
-**Thursday (1.5h):** DP → **State** and **Strategy** pattern sections (choose relevant introductions and examples); optional **Decorator** if adding cross-cutting behavior. Read PostgreSQL transaction/isolation and EF Core concurrency documentation.
+**Thursday (1.5h):** CS → design-pattern material only when it clarifies the job lifecycle. Optionally use DP → behavioral-pattern sections → `State` and `Strategy`; do not study the full Gang of Four catalogue. Read PostgreSQL transaction/isolation and EF Core concurrency documentation.
 
 **Skip:** implementing patterns without a demonstrated need. **Evidence:** concurrency-safe job state changes, idempotency-key test, design trade-off note.
 
@@ -212,9 +225,9 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 ### Week 7 — Course assignments
 
-**Monday (1h):** HP → *Measure Performance During Development Part 1*: **Measuring CPU** and **Measuring Memory**; *Part 2*: **Micro Benchmarking with BenchmarkDotNet** (review).
+**Monday (1h):** CS → `.NET under the hood`, `Advanced C# types`, and `Collections` → CPU, memory, and allocation subsections. Optionally use HP → `Measure Performance During Development Part 1`, `Measure Performance During Development Part 2`, and `Performance Monitoring in Production for .NET Core`. Supplement with current .NET diagnostics and BenchmarkDotNet documentation because HP uses older .NET-era tooling.
 
-**Thursday (1.5h):** MA → *Threads Synchronization*: **Threads Synchronization Overview**, **Critical Section and Atomic Operation**, **Exclusive Lock**; select later lectures on concurrent collections/cancellation. HP → production-monitoring material if time permits. Use current OpenTelemetry docs for modern instrumentation.
+**Thursday (1.5h):** CS → `.NET under the hood` and `Advanced C# types` → concurrency and synchronization subsections. If the race or locking experiment needs more depth, use MT → `Threads Synchronization` and `Concurrent Collections` → thread safety and collection-selection subsections. Use current OpenTelemetry, health-check, and Testcontainers documentation for modern tooling.
 
 **Skip:** treating an old profiler walkthrough as current tooling guidance. **Evidence:** before/after performance measurements, trace/metric samples, failure test.
 
@@ -234,9 +247,9 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 ### Week 8 — Course assignments
 
-**Monday (1h):** TD → *Using GitHub for Continuous Integration and Testing*: **Protect main/master Branch**, **Create GitHub Build Action**.
+**Monday (1h):** API → unit and integration-testing sections in the expanded outline. Optionally use TD → `Integration Testing - Testing the Data Access Layer` and `Using GitHub for Continuous Integration and Testing` → data-access integration tests and CI subsections. Read current GitHub Actions documentation and create the initial build workflow.
 
-**Thursday (1.5h):** TD → same section: **Finalizing Continuous Integration Action**; revisit *Unit Testing - Application Core* for tests around state transitions and failures. Review GitHub Actions and .NET testing docs for current syntax.
+**Thursday (1.5h):** API → revisit the unit and integration-testing sections for state transitions and failures. Use TD → `Unit Testing - Application Core` or `Integration Testing - Testing the Data Access Layer` only for unresolved testing gaps, then review current GitHub Actions and .NET testing documentation.
 
 **Skip:** beginner GitHub account setup. **Evidence:** passing PR workflow, documented architectural review, final demonstration.
 

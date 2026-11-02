@@ -8,23 +8,23 @@ Score 0 = unfamiliar, 1 = conceptual, 2 = guided practice, 3 = independent, 4 = 
 
 | Skill | Start (0–4) | 6 months | 12 months | 18 months | Final |
 |---|---|---|---|---|---|
-| SQL and database internals | | | | | |
-| C#/.NET engineering | | | | | |
-| Python engineering | | | | | |
-| Scala/JVM | | | | | |
-| Data structures/algorithms | | | | | |
-| OS and concurrency | | | | | |
-| Networking | | | | | |
-| Distributed systems | | | | | |
-| Spark optimization | | | | | |
-| Parquet/Delta/Iceberg | | | | | |
-| Kafka/streaming | | | | | |
-| Kubernetes/Terraform | | | | | |
-| Observability/SRE | | | | | |
-| Applied AI/RAG | | | | | |
-| AI evaluation/security | | | | | |
-| Architecture communication | | | | | |
-| Technical leadership | | | | | |
+| SQL and database internals | 3 | | | | |
+| C#/.NET engineering | 2 | | | | |
+| Python engineering | 2 | | | | |
+| Scala/JVM | 0 | | | | |
+| Data structures/algorithms | 1 | | | | |
+| OS and concurrency | 1 | | | | |
+| Networking | 1 | | | | |
+| Distributed systems | 0 | | | | |
+| Spark optimization | 0 | | | | |
+| Parquet/Delta/Iceberg | 1 | | | | |
+| Kafka/streaming | 0 | | | | |
+| Kubernetes/Terraform | 1 | | | | |
+| Observability/SRE | 0 | | | | |
+| Applied AI/RAG | 0 | | | | |
+| AI evaluation/security | 1 | | | | |
+| Architecture communication | 1 | | | | |
+| Technical leadership | 0 | | | | |
 
 ## Monthly milestone checklist
 
