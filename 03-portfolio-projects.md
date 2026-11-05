@@ -27,7 +27,9 @@ README.md
 
 **Purpose:** Front-load evidence for enterprise DBA technical gaps across Oracle and SQL Server, with Azure SQL and Db2 orientation. ExaCC is a bounded architecture module, not the project's center. This is a learning lab and operations pack, not a claim of senior production ownership.
 
-**Scope:** Practice Oracle RMAN recovery and, where authorized environments permit, RAC/ASM or Data Guard scenarios. Practice or document SQL Server Always On, backup/restore, and failover; compare Azure SQL service models, monitoring, security, and migration paths; and produce a Db2 operational comparison. Include monitoring, least privilege, patching, scripting, incident RCA, change controls, and a short ExaCC architecture/service-boundary overview.
+**Free-resource plan:** Use [Oracle AI Database Free 26ai](https://www.oracle.com/database/free/) locally for single-instance Oracle and RMAN work; it is not RAC, Data Guard, or ExaCC. Use [SQL Server Developer](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2025?view=sql-server-ver17) locally for development/test. Use [Azure SQL's free tier](https://learn.microsoft.com/en-us/azure/azure-sql/database/free-offer?view=azuresql) only with AutoPause and verified free-limit settings. For Db2, use the existing course subscription and [IBM documentation](https://www.ibm.com/docs/en/db2); no current no-cost local edition was verified for this plan. See the [Phase 1 free resource map](labs/phase-01-enterprise-dba-bridge.md#free-resource-map) before starting; no paid cloud provisioning is required.
+
+**Scope:** Practice Oracle RMAN recovery and, where Oracle LiveLabs offers an appropriate free hosted lab, study RAC/ASM or Data Guard scenarios. Practice SQL Server backup/restore and tuning locally; attempt an Always On lab only with an authorized two-node WSFC environment and sufficient existing hardware, otherwise use a tabletop. Compare Azure SQL service models, monitoring, security, and migration paths using the free tier or documentation. Produce a Db2 operational comparison from the existing course and IBM docs. Include monitoring, least privilege, patching, scripting, incident RCA, change controls, and a short ExaCC architecture/service-boundary overview.
 
 **Evidence:** Cross-platform architecture comparison, lab/version notes, Oracle recovery and HA runbooks, SQL Server Always On/failover decision tree, Azure SQL service-selection and migration brief, Db2 comparison, tuning/RCA report, ExaCC boundary diagram, and a skills matrix distinguishing studied, lab-tested, and production experience.
 
@@ -37,13 +39,15 @@ README.md
 
 **Purpose:** Demonstrate transferable software engineering fundamentals using a familiar language.
 
-**Stack:** C#, ASP.NET Core, PostgreSQL, Dapper or EF Core, xUnit, Testcontainers, Docker, OpenTelemetry.
+**Stack:** [Free .NET 10 SDK](https://dotnet.microsoft.com/en-us/download), C#, ASP.NET Core, [local PostgreSQL](https://www.postgresql.org/download/), Dapper or EF Core, xUnit, OpenTelemetry. Optional: [Testcontainers for .NET](https://testcontainers.com/guides/getting-started-with-testcontainers-for-dotnet/) with [Docker Personal](https://www.docker.com/pricing/) or [Podman Desktop](https://podman-desktop.io/docs/installation/windows-install).
+
+**Environment:** No paid cloud service is required. Use a local PostgreSQL installation by default. Use Testcontainers only if a Docker-compatible runtime is already available; otherwise point integration tests at a dedicated local test database and document setup/cleanup. GitHub Actions standard runners are free for public repositories; private repositories draw from included compute and can incur charges after the allowance, so run checks locally or verify billing before enabling hosted runs.
 
 **Requirements:** POST/GET/cancel/retry jobs; explicit state machine; idempotency keys; optimistic concurrency; background worker; authentication; health; logs/metrics/traces; CI.
 
 **Failure tests:** concurrent updates, duplicate submissions, database timeout, worker crash, cancelled request.
 
-**Evidence:** API contract, architecture review, test report, concurrency explanation.
+**Evidence:** API contract, architecture review, test report, concurrency explanation, and a clean-checkout setup guide that works without cloud accounts.
 
 ## P2 — Scala/JVM Foundations
 

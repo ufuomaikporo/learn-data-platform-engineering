@@ -10,6 +10,18 @@ Use this workbook for the detailed implementation steps and guided experiments l
 - Make one small change at a time; run the narrowest relevant test, then the full suite at each weekly gate.
 - Save evidence: commands, test output, diagrams, measurements, and short decision notes. Do not claim a behavior was tested if it was only reasoned about.
 
+## Free resource map
+
+Prefer local development; no paid cloud account is required for Phase 2. Verify current terms and setup requirements before installing tools.
+
+| Need | No/low-cost resource | How to use it |
+|---|---|---|
+| C# and ASP.NET Core | [Free .NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) and the [ASP.NET Core Web API tutorial](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0) | Use the tutorial for scaffold/API concepts, then implement the Job API described here. Its sample uses an in-memory database; this workbook uses local PostgreSQL for persistence. |
+| PostgreSQL | [PostgreSQL installers](https://www.postgresql.org/download/) for Windows, Linux, and macOS | Install locally and use a dedicated development database plus a separate test database. No managed/cloud database is needed. |
+| Disposable integration-test database | [Testcontainers for .NET](https://testcontainers.com/guides/getting-started-with-testcontainers-for-dotnet/) plus [Docker Personal](https://www.docker.com/pricing/) or [Podman Desktop](https://podman-desktop.io/docs/installation/windows-install) | Optional. Docker Personal is $0 only for eligible individual use under current Docker terms. Podman Desktop is a free alternative; Windows setup uses WSL2 or Hyper-V and lists 6 GB RAM for its Podman machine. If unavailable, run integration tests against a dedicated local PostgreSQL test database and clean it between runs. |
+| CI | [GitHub Actions billing guidance](https://docs.github.com/en/billing/concepts/product-billing/github-actions) | Standard hosted runners are free for public repositories. Private repositories use the plan's included compute and can incur charges after it is exhausted. For a public portfolio repo, use only synthetic data and no secrets; otherwise run the same checks locally or verify the budget first. |
+| API tutorials | Microsoft Learn and the existing Udemy subscription | No additional course purchase is required if the linked courses remain included in the subscription. Follow only the course sections in the schedule; implement the exercises in your own repository. |
+
 ## Week 1: Runtime, Domain Model, and API Skeleton
 
 ### Value/reference, records, boxing, and allocation experiment
@@ -59,7 +71,7 @@ Use this workbook for the detailed implementation steps and guided experiments l
 
 ### Job persistence slice
 
-1. Add PostgreSQL to the local development environment using an approved local container or existing authorized database.
+1. Install PostgreSQL locally using the free installer by default. Use a container only if Docker/Podman is already available; do not provision a paid managed database.
 2. Add a schema/migration for jobs and choose one data-access approach (Dapper or EF Core). Record why you chose it.
 3. Implement create, get-by-id, list/filter, and basic validation operations.
 4. Add a repository or equivalent persistence boundary only where it improves testability; avoid adding layers without a reason.
@@ -67,7 +79,7 @@ Use this workbook for the detailed implementation steps and guided experiments l
 
 ### Integration tests and query comparison
 
-1. Configure a test database isolated from development data, using Testcontainers or another approved disposable test setup.
+1. Configure a test database isolated from development data. Use Testcontainers only if a Docker-compatible runtime is available; otherwise create a dedicated local PostgreSQL test database and reset it for each run.
 2. Add integration tests for create, retrieve, filter, invalid input, and database constraint behavior.
 3. Ensure tests create and clean up their own data and can run repeatedly.
 4. Compare one in-memory LINQ operation with its database-backed equivalent; capture generated SQL and note execution location.
@@ -234,9 +246,9 @@ Use this workbook for the detailed implementation steps and guided experiments l
 
 ### CI and reproducible environment
 
-1. Add a GitHub Actions workflow for restore, build, format/analyzers, unit tests, PostgreSQL integration tests, dependency scanning, and Docker build.
+1. Add a GitHub Actions workflow for restore, build, format/analyzers, unit tests, PostgreSQL integration tests, and dependency scanning. Add a Docker image build only if a local container workflow is available; no paid runner or cloud build is required.
 2. Ensure PostgreSQL test dependencies are ephemeral and credentials are supplied through CI secrets/variables, not committed files.
-3. Add Docker Compose or equivalent local instructions for the API and PostgreSQL.
+3. Add repeatable local instructions for the API and PostgreSQL. Docker Compose is optional; document the native PostgreSQL setup as a working path.
 4. Clone or check out into a clean directory and follow the README from scratch.
 5. Fix reproducibility gaps and verify the pipeline passes on a pull request.
 
@@ -248,4 +260,4 @@ Use this workbook for the detailed implementation steps and guided experiments l
 4. Prepare a 5–10 minute demonstration: problem, design, key trade-offs, tests, failure behavior, and next steps.
 5. Complete the phase acceptance criteria and retrospective; update the tracker only where evidence supports a change.
 
-**Week 8 evidence:** reproducible release, green CI, architecture pack, recovery demo, and retrospective.
+**Week 8 evidence:** reproducible local release, green CI or recorded local check output, architecture pack, recovery demo, and retrospective. Container packaging is an optional enhancement, not a paid-resource gate.

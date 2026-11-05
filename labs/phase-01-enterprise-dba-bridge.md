@@ -11,6 +11,20 @@ Use this workbook for step-by-step procedures for Phase 1 assignments, labs, gui
 - Record each activity as **executed**, **observed**, **tabletop**, or **documentation-only**. Do not present simulations as production experience.
 - Capture sanitized outputs and versions. Do not include credentials, personal data, proprietary data, or sensitive topology in portfolio artifacts.
 
+## Free resource map
+
+Prefer the local tools first. The links and terms below were checked on 2026-11-02; verify the current license and pricing page before downloading or provisioning.
+
+| Skill | No/low-cost resource | Use and limits |
+|---|---|---|
+| Oracle administration and RMAN | [Oracle AI Database Free 26ai](https://www.oracle.com/database/free/) on Windows x64, Linux, or an authorized local container; [installation/connect quick start](https://www.oracle.com/database/free/get-started/); [Oracle Free Use Terms](https://www.oracle.com/downloads/licenses/oracle-free-license.html) | Free for development, testing, prototyping, and demonstration under Oracle Free Use Terms. Resource ceiling: 2 CPU threads, 2 GB database RAM, 12 GB user data. Use it for single-instance inspection and recovery only; it is not RAC, Data Guard, or ExaCC practice. The linked course covers earlier releases, so verify commands against the lab version. |
+| Oracle RAC/Data Guard/ExaCC concepts | [Oracle LiveLabs](https://livelabs.oracle.com/) and the linked Udemy walkthroughs | Check the lab listing and launch page for account, capacity, and time limits. Do not create OCI compute/storage resources expecting them to be free. If an appropriate hosted lab is unavailable, use course demos plus the workbook tabletop; mark it not lab-tested. |
+| SQL Server administration and performance | [SQL Server 2025 Developer](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2025?view=sql-server-ver17) installed locally, or [Microsoft's SQL Server container guide](https://learn.microsoft.com/en-us/sql/linux/containers/deploy?view=sql-server-ver17) | Developer includes Enterprise features and is licensed for development/test, not production. Use it for local backup/restore, query-plan, security, and monitoring exercises. SQL Server Express is also free, but does not support Availability Groups. |
+| SQL Server Always On | SQL Server Developer plus a local WSFC lab only if you already have sufficient hardware/VM capacity; [Windows Server Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2025) under its current terms; otherwise use the course walkthrough and tabletop | A traditional Windows Availability Group needs WSFC nodes, with each replica on a different node. Two VMs, Windows Server, and sufficient host RAM/storage may be needed. Windows Server evaluation is time-limited and governed by its terms. Do not spin up paid cloud VMs; if the host cannot support the cluster, document the procedure and label it not lab-tested. |
+| Azure SQL | [Azure SQL Database free tier](https://learn.microsoft.com/en-us/azure/azure-sql/database/free-offer?view=azuresql) | Current offer: up to 100,000 vCore-seconds/month, 32 GB data, and 32 GB backup per database, up to 10 free-tier databases per subscription. Requires an Azure subscription and excludes Azure for Students Starter. Select the free-tier option and **AutoPause** both at idle and at quota exhaustion; never select paid overage. Verify `useFreeLimit=true` and monitor the free allowance. If uncertain, do the Week 5 service-selection exercise on paper. |
+| Db2 | [IBM Db2 documentation](https://www.ibm.com/docs/en/db2) plus the Db2/CRUD courses already linked in the weekly schedule, if included in your existing Udemy subscription | I could not verify a currently downloadable, no-cost local Db2 Community edition from IBM's current product/documentation pages. Use course demonstrations and official docs for the required orientation; only use an IBM trial if its account page explicitly confirms $0 for the intended resource and you can verify billing controls. Otherwise mark the exercise documentation-only. |
+| Containers for local integration tests | [Docker Personal](https://www.docker.com/pricing/) or [Podman Desktop for Windows](https://podman-desktop.io/docs/installation/windows-install); [Testcontainers for .NET + PostgreSQL](https://testcontainers.com/guides/getting-started-with-testcontainers-for-dotnet/) | Docker Personal is $0 for eligible individual use under its current terms. Podman Desktop is a free alternative but uses WSL2 or Hyper-V; its Windows guide lists a 6 GB RAM minimum for the Podman machine and setup requirements. If containers do not fit the computer, install PostgreSQL locally and run the same integration tests against a dedicated test database. |
+
 ## Week 1: Baseline and Platform Inventory
 
 ### Baseline self-assessment
@@ -59,7 +73,7 @@ Use this workbook for step-by-step procedures for Phase 1 assignments, labs, gui
 
 ### Single-instance RMAN recovery
 
-1. Use a disposable or otherwise authorized single-instance database. Record the version and define a recovery target before starting.
+1. Use Oracle AI Database Free 26ai locally or an authorized Oracle LiveLabs single-instance environment. Record the version and define a recovery target before starting. Check the linked course steps against the selected version.
 2. Inspect or create the backup, then run the applicable backup validation.
 3. Follow the selected RMAN course's backup/restore and recovery demonstration for the same version. Stop if the lab differs materially from the instructions; do not improvise destructive steps.
 4. Verify database state and expected data using approved queries.
@@ -96,7 +110,7 @@ Use this workbook for step-by-step procedures for Phase 1 assignments, labs, gui
 
 1. Choose one scenario: RAC node loss, planned Data Guard switchover, or Data Guard failover.
 2. Record prerequisites, expected behavior, safety checks, recovery/rollback path, and verification criteria from the matching course section and docs.
-3. Execute only if an authorized lab supports the scenario. Capture version and sanitized evidence.
+3. Execute only if an authorized Oracle LiveLabs or existing lab environment supports the scenario. Oracle AI Database Free is single-instance practice, not a RAC/Data Guard lab. Capture version and sanitized evidence.
 4. Otherwise, walk through the sequence on paper, label every action **not lab-tested**, and list the environment/access needed to test it.
 
 ### OCI/ExaCC responsibility diagram
@@ -130,7 +144,7 @@ Use this workbook for step-by-step procedures for Phase 1 assignments, labs, gui
 
 ### Availability Group failover
 
-1. Confirm the lab uses an authorized multi-instance topology and meets the course prerequisites. Record SQL Server and Windows versions, replica roles, quorum, and failover mode.
+1. Use SQL Server Developer on authorized local systems and confirm the lab has the required WSFC topology, with each replica on a different node. Record SQL Server and Windows versions, replica roles, quorum, and failover mode. Do not provision cloud VMs for this exercise.
 2. Capture baseline AG health, synchronization state, and a test application connection.
 3. Follow the SQL Server 2025 course setup for the available lab; initiate a **planned** failover only.
 4. Verify primary/secondary roles, database synchronization, listener connectivity, and application access.
@@ -152,11 +166,11 @@ Use this workbook for step-by-step procedures for Phase 1 assignments, labs, gui
 2. Compare Azure SQL Database, Managed Instance, and SQL Server on Azure VMs for compatibility, control, HA, patching, backup, monitoring, and ownership.
 3. Choose a target service and cite the documentation supporting the choice.
 4. Sequence discovery, compatibility checks, data movement, testing, cutover, rollback, security, and monitoring.
-5. Record cost and identity/network assumptions. Keep this as a paper exercise unless you have an authorized, cost-controlled subscription.
+5. Record cost and identity/network assumptions. Keep this as a paper exercise unless you have an authorized Azure subscription and select the free tier with AutoPause at both idle and quota exhaustion. Verify the free-limit setting and do not allow paid overages.
 
 ### Optional create/connect walkthrough
 
-1. Confirm the subscription and budget permit resource creation.
+1. Confirm that the Azure SQL free-tier offer is available for your subscription, that the subscription is not an excluded type, and that no paid overage is enabled. If unsure, skip resource creation and use the paper exercise.
 2. Follow the course sections for creating the database, configuring access, and connecting with SSMS.
 3. Test the connection and permissions using non-sensitive sample data.
 4. Delete temporary resources and verify cleanup; record actual costs if any.
@@ -191,11 +205,11 @@ Use this workbook for step-by-step procedures for Phase 1 assignments, labs, gui
 
 ### Db2 setup and CRUD walkthrough
 
-1. Use an authorized Db2 environment. Confirm edition/version and permitted actions before setup; cap setup troubleshooting at 30 minutes.
+1. Use the existing Udemy course walkthrough and IBM documentation by default. Only use a Db2 environment if its current account/license page explicitly confirms $0 for the intended resource and billing controls are clear. Confirm edition/version and permitted actions before setup; cap setup troubleshooting at 30 minutes.
 2. Follow `DB2 Database Server Setup` and `Performing CRUD Operations and Data Manipulation` in the Db2 course, or `IBM DB2 Setup` and `Building CRUD App: Part 2: Python and DB2 Interaction` in the Python/Db2 course.
 3. Create or connect to a sample database/table, then insert, read, update, and delete a harmless test record.
 4. Capture sanitized connection/setup details, SQL, outputs, and cleanup steps.
-5. If setup is blocked, trace the course's documented path and label it **documentation-only**; do not claim independent Db2 administration.
+5. If no verified no-cost environment is available or setup is blocked, trace the course's documented path and label it **documentation-only**; do not create an unbudgeted cloud resource or claim independent Db2 administration.
 
 ### Db2 operations primer
 

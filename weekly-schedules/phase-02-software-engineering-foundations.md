@@ -258,11 +258,11 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 - [ ] **Monday (1h):** Study test strategy (unit/integration/contract), code review, supply-chain security, and deployment/rollback basics.
 - [ ] **Tuesday (1h):** Review the API without AI, create issues, and fix the highest-impact item using the [Week 8 design-review procedure](../labs/phase-02-software-engineering-foundations.md#design-review-without-ai).
-- [ ] **Thursday (1.5h):** Add or refine CI, analyzers, unit/integration tests, dependency scanning, and Docker build; verify a clean checkout using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
-- [ ] **Saturday (3h):** Finalize documentation, diagrams, ADRs, Docker Compose, and demo; perform the worker-crash/recovery demonstration using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+- [ ] **Thursday (1.5h):** Add or refine CI, analyzers, unit/integration tests, and dependency scanning; build a container only if a free local runtime is available. Verify a clean checkout using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+- [ ] **Saturday (3h):** Finalize documentation, diagrams, ADRs, reproducible local PostgreSQL setup, and demo; Docker Compose is optional. Perform the worker-crash/recovery demonstration using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
 - [ ] **Sunday (1.5h):** Complete the Phase 2 assessment and retrospective, update the skill matrix, and identify concepts to review before Phase 3 using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
 
-**Deliverables:** Versioned release, green CI, runnable Docker setup, architecture pack, failure demo, and Phase 2 retrospective.
+**Deliverables:** Versioned release, passing CI or reproducible local checks, runnable local setup, architecture pack, failure demo, and Phase 2 retrospective.
 
 **Self-check:** Can you defend your design choices and explain the runtime, transaction, concurrency, and reliability behavior without consulting AI-generated notes?
 
@@ -277,7 +277,7 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 - [ ] Worker concurrency is bounded; cancellation and graceful shutdown are tested.
 - [ ] Authentication and authorization are applied where appropriate.
 - [ ] Unit and PostgreSQL integration tests cover success and failure paths.
-- [ ] CI runs build, formatting/analyzers, tests, and container build.
+- [ ] CI or recorded local checks run build, formatting/analyzers, and tests; container build is optional and uses a free local runtime if available. Public-repository GitHub Actions runners are free; verify included compute/billing before running private-repository workflows.
 - [ ] Logs, metrics, and traces identify a failed job end to end.
 - [ ] README, diagrams, ADRs, threat model, and runbook are understandable to a new contributor.
 - [ ] You can reproduce a failure and demonstrate recovery.
