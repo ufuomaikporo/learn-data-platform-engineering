@@ -6,24 +6,24 @@
 
 **Scope:** This is Phase 2 (Months 3–4) of the 26-month Staff/Principal roadmap. Weeks 1–4 are retained from the original schedule; Weeks 5–8 complete the phase.
 
-This is a deepening track for someone already developing C# services, not a beginner syntax course. Keep the focus on reasoning, experiments, tests, and documentation. Each day's checklist item links to its assigned lesson or documentation; exercise days also link to the corresponding workbook section.
+This is a deepening track for someone already developing C# services, not a beginner syntax course. Keep the focus on reasoning, experiments, tests, and documentation. Daily checklist entries put the day and duration on their own line, then use italicized *Study* and *Project* labels to distinguish course work from building the Job Management API. Project time is allocated within each day's stated duration, not added on top of the 8-hour weekly budget. Each item links to its assigned lesson or documentation; project tasks also link to the corresponding workbook section.
 
-Step-by-step procedures for Phase 2 experiments, implementation tasks, tests, and release work are in the [Phase 2 Lab and Guided Practice Workbook](../labs/phase-02-software-engineering-foundations.md). Each checklist item that requires an exercise links to its specific workbook section; the daily course assignments below link to the course or documentation and identify the sections to use.
+Step-by-step procedures for Phase 2 experiments, implementation tasks, tests, and release work are in the [Phase 2 Lab and Guided Practice Workbook](../labs/phase-02-software-engineering-foundations.md). Project blocks below name the API work and its time allocation; use the linked workbook section for detailed steps.
 
 ## Weekly cadence
 
 | Day | Duration | Format |
 |---|---:|---|
 | Monday | 1 hour | Course or documentation |
-| Tuesday | 1 hour | Focused coding exercises |
-| Thursday | 1.5 hours | Theory and experiments |
+| Tuesday | 1 hour | Project experiments and application |
+| Thursday | 1.5 hours | Course study and project experiments |
 | Saturday | 3 hours | Portfolio implementation |
-| Sunday | 1.5 hours | Tests, reading, review |
+| Sunday | 1.5 hours | Project tests, documentation, and review |
 | **Total** | **8 hours** | |
 
 ## Udemy course key and section selection
 
-Use **two primary courses**, then fill the project-specific gaps with Microsoft documentation and experiments. Course content can change; use section titles rather than fixed lecture numbers. Sections were checked against public Udemy curricula in October 2026.
+Use **two primary courses**, then fill the project-specific gaps with Microsoft documentation and experiments. Course content can change; use section titles rather than fixed lecture numbers. Section titles below were checked against the Udemy course pages on November 5, 2026.
 
 | Code | Course | Instructor | Link |
 |---|---|---|---|
@@ -35,7 +35,7 @@ Use **two primary courses**, then fill the project-specific gaps with Microsoft 
 | **CA** *(optional)* | ASP.NET Core - SOLID and Clean Architecture | Trevoir Williams | [Udemy](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) |
 | **DP** *(optional)* | Design Patterns in C# and .NET | Dmitri Nesteruk | [Udemy](https://www.udemy.com/course/design-patterns-csharp-dotnet/) |
 
-**Selection rules:** Approximately **1.5–2 hours of video/documentation per week**, with **6–6.5 hours spent coding, testing, profiling, and explaining decisions**. Watch only the relevant sections. The API course directly covers PostgreSQL, EF Core, authentication, authorization, unit testing, and integration testing. Its AI-assisted workflow is optional; do not use generated code as a substitute for understanding. Course exercises are optional; implement the concepts in **your own Job Management API** instead.
+**Selection rules:** Approximately **1.5–2 hours of video/documentation per week**, with **6–6.5 hours spent coding, testing, profiling, and explaining decisions**. The project blocks below allocate 6.25 hours in Weeks 1–2 and 6.5 hours in Weeks 3–8; all project and study time is within the 8-hour weekly cadence. Watch only the relevant sections. The API course directly covers PostgreSQL, EF Core, authentication, authorization, unit testing, and integration testing. Its AI-assisted workflow is optional; do not use generated code as a substitute for understanding. Course exercises are optional; implement the concepts in **your own Job Management API** instead.
 
 The two primary courses do not fully teach idempotency, optimistic concurrency, worker recovery, Testcontainers, OpenTelemetry, Docker, or CI. Learn those through the Microsoft documentation links below and the experiments in this schedule. **MT, HP, TD, CA, and DP are optional specialist material**, not additional required courses. Choose at most one optional supplement for a study session, and use it only when a specific concept needs more explanation; project implementation and failure tests take priority over watching more videos.
 
@@ -43,36 +43,44 @@ The two primary courses do not fully teach idempotency, optimistic concurrency, 
 
 | Week | Course sections to use | Approx. guided-study time |
 |---|---|---:|
-| 1 | **CS:** fundamentals, OOP, exceptions, collections. **API:** project setup, first endpoint, and manual API testing. **HP (optional):** memory measurement. **TD (optional):** TDD foundations. | 1.5–2 h |
-| 2 | **CS:** generics and LINQ. **API:** persistence and data-access testing. **HP (optional):** benchmarking or EF Core performance. **TD (optional):** application-core unit testing. | 1.5–2 h |
-| 3 | **CS:** async/await and cancellation. **MT (optional):** task-based asynchronous programming and async/await. **API:** REST design, endpoints, and persistence. | 1.5–2 h |
-| 4 | **CS:** async and multithreading review. **API:** service boundaries and testing. **CA (optional):** SOLID and application core. **DP (optional):** SOLID principles. | 1.5–2 h |
-| 5 | **API:** validation, errors, middleware, Identity, JWT, and authorization. **CA (optional):** API structure and security. | 1.5–2 h |
-| 6 | **API:** EF Core, persistence, unit testing, and integration testing. **CA (optional):** infrastructure and testing. **DP (optional):** State and Strategy. | 1.5–2 h |
-| 7 | **CS:** performance and concurrency. **MT (optional):** synchronization and concurrent collections. **HP (optional):** profiling and production monitoring. | 1.5–2 h |
-| 8 | **API:** testing review. **TD (optional):** integration testing and GitHub Actions CI. Supplement with current GitHub Actions, Docker, and .NET CI documentation. | 1.5–2 h |
+| 1 | **CS:** `C# Fundamentals`, `Basics of Object-Oriented Programming`, `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces`, `Exceptions and error handling`, `Collections`, `.NET under the hood`. **API:** `Project setup and overview`, `Defining the first endpoint`, `Testing the API manually`. **TD (optional):** `Getting Started with Test Driven Development`. | 1.5–2 h |
+| 2 | **CS:** `Generic types & advanced use of methods`, `LINQ`. **API:** `Database and Entity Framework Core`, `Entity Relationships in EF Core`, `Automated testing`. **HP (optional):** `Measure Performance During Development Part 2`, `Data Access Performance: Entity Framework Core`. **TD (optional):** `Unit Testing - Application Core`. | 1.5–2 h |
+| 3 | **CS:** `Multithreading & asynchrony`. **MT (optional):** `Task based Asynchronous Programming`, `Async & Await`, `Threads Synchronization`, `Concurrent Collections`. **API:** `REST APIs`, `CRUD with Minimal APIs`, `Database and Entity Framework Core`. | 1.5–2 h |
+| 4 | **CS:** `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces`. **API:** `Service Layer`, `Project organization and refactoring`, `Automated testing`. **CA (optional):** `Preliminary Concepts`, `Setting up the Application Core`, `Setting up Infrastructure Projects`. **DP (optional):** `The SOLID Design Principles`. | 1.5–2 h |
+| 5 | **API:** `Validation`, `ASP.NET Core request pipeline`, `Endpoint filters and action filters`, `User management with ASP.NET Core Identity`, `JWT authentication and authorization`. **CA (optional):** `Creating the API project`, `Securing API and UI`. | 1.5–2 h |
+| 6 | **API:** `Database and Entity Framework Core`, `Entity Relationships in EF Core`, `Service Layer`. **CA (optional):** `Setting up the Application Core`, `Setting up Infrastructure Projects`. **DP (optional):** `State`, `Strategy`. | 1.5–2 h |
+| 7 | **CS:** `.NET under the hood`, `Advanced C# types`, `Collections`, `Multithreading & asynchrony`. **MT (optional):** `Threads Synchronization`, `Concurrent Collections`. **HP (optional):** `Measure Performance During Development Part 1`, `Measure Performance During Development Part 2`, `Performance Monitoring in Production for .NET Core`. | 1.5–2 h |
+| 8 | **API:** `Automated testing`. **TD (optional):** `Unit Testing - Application Core`, `Integration Testing - Testing the Data Access Layer`, `Using GitHub for Continuous Integration and Testing`. Supplement with current GitHub Actions, Docker, and .NET CI documentation. | 1.5–2 h |
 
-The detailed weekly assignments below contain the specific Udemy section and subsection names. Use section titles rather than fixed lecture numbers because course content can change.
+The daily assignments below name the specific Udemy section and subsection titles. Use section titles rather than fixed lecture numbers because course content can change.
 
-## Detailed weekly course assignments
+## Weekly schedule
 
 ## Week 1 — .NET runtime and types
 
 **Goal:** Explain the CLR, JIT, type semantics, allocation, and garbage collection.
 
-### Week 1 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `C# Fundamentals`, `Basics of Object-Oriented Programming`, and `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` → types, records, value/reference semantics, and OOP subsections. Read Microsoft's [Common Language Runtime (CLR) overview](https://learn.microsoft.com/en-us/dotnet/standard/clr) for the remaining time.
+  ***Study:*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `C# Fundamentals`, `Basics of Object-Oriented Programming`, `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces`, and `.NET under the hood` for types, OOP, CLR, and JIT; Microsoft's [CLR overview](https://learn.microsoft.com/en-us/dotnet/standard/clr).
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Exceptions and error handling` and `Collections` → exception, interface, and collection subsections. [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Project setup and overview`, `Defining the first endpoint`, and `Testing the API manually` → scaffold the API and verify a simple endpoint. Optionally use [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Getting Started with Test Driven Development` → Red-Green-Refactor, to create the test project. Defer profiling until the API is running if needed.
+  ***Study (0.25h):*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `C# Fundamentals` for types; review Microsoft's [C# types and records](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/).
 
-**Skip:** advanced C# sections that are unrelated to the API. **Evidence:** allocation snapshots and first failing/passing domain test.
+  ***Project (0.75h of today's 1h):*** Run the value/reference, record, boxing, and allocation experiment; use the results to refine the Job model and capture a short runtime note in the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
 
-- [ ] **Monday (1h):** Study CLR, JIT compilation, value vs reference types, stack vs heap using the [C# course sections](https://www.udemy.com/course/ultimate-csharp-masterclass/) `C# Fundamentals` and Microsoft's [CLR overview](https://learn.microsoft.com/en-us/dotnet/standard/clr).
-- [ ] **Tuesday (1h):** Complete the value/reference, record, boxing, and allocation experiment in the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton); review [C# types and records](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/).
-- [ ] **Thursday (1.5h):** Study GC and `IDisposable` using [.NET garbage collection fundamentals](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals); complete the local allocation/disposal inspection in the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
-- [ ] **Saturday (3h):** Create the `dotnet-job-platform` solution, Job domain model, and running ASP.NET Core API skeleton using the [API course sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) `Project setup and overview` and `Defining the first endpoint`, plus the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
-- [ ] **Sunday (1.5h):** Add the first Job model test and document runtime concepts and initial architecture decisions using [TDD foundations](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) and the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
+- [ ] **Thursday (1.5h):**
+
+  ***Study (0.5h):*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `.NET under the hood`, `Exceptions and error handling`, and `Collections`; [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Project setup and overview`, `Defining the first endpoint`, and `Testing the API manually`. Optionally use [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Getting Started with Test Driven Development`. Read [.NET garbage collection fundamentals](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals) for GC and `IDisposable`.
+
+  ***Project (1h of today's 1.5h):*** Inspect allocation and disposal in a local sample, then record how the API will manage disposable resources in the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
+
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Create the `dotnet-job-platform` solution, Job domain model, and running ASP.NET Core API skeleton using [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Project setup and overview` and `Defining the first endpoint`, plus the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Add the first Job model test, verify the endpoint, and document runtime concepts and initial architecture decisions using [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Getting Started with Test Driven Development` and the [Week 1 workbook section](../labs/phase-02-software-engineering-foundations.md#week-1-runtime-domain-model-and-api-skeleton).
 
 **Deliverables:** Running skeleton API with a manually verified endpoint, Job model and first test, `docs/architecture.md`, short runtime notes.
 
@@ -82,19 +90,27 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 **Goal:** Understand language abstractions and their implications for data access.
 
-### Week 2 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Generic types & advanced use of methods` and `LINQ` → generics, delegates, lambdas, and LINQ subsections. Supplement with Microsoft's [expression tree documentation](https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/expression-trees/) and [EF Core querying documentation](https://learn.microsoft.com/en-us/ef/core/querying/).
+  ***Study:*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Generic types & advanced use of methods` and `LINQ` for generics, delegates, events, lambdas, and expression trees.
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → persistence, EF Core, and data-access testing sections in the expanded outline. Optionally use [HP — High Performance Coding with .NET Core and C#](https://www.udemy.com/course/high-performance-coding-with-net-core-and-csharp/) → `Measure Performance During Development Part 2` → BenchmarkDotNet or `Data Access Performance: Entity Framework Core`, and [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Unit Testing - Application Core`. Read Microsoft's [ASP.NET Core integration-testing documentation](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests) and [Testcontainers for .NET documentation](https://dotnet.testcontainers.org/); adapt examples to PostgreSQL job persistence and review EF Core query behavior.
+  ***Study (0.25h):*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Generic types & advanced use of methods` for generics.
 
-**Skip:** completing the course's booking application. **Evidence:** `Result<T>` tests, database integration test, SQL query comparison.
+  ***Project (0.75h of today's 1h):*** Implement and test a small `Result<T>` or generic collection experiment; document whether it solves a real Job API need or should remain an isolated exercise in the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
 
-- [ ] **Monday (1h):** Study generics, delegates, events, lambdas, and expression-tree concepts in the [C# course sections](https://www.udemy.com/course/ultimate-csharp-masterclass/) `Generic types & advanced use of methods` and `LINQ`.
-- [ ] **Tuesday (1h):** Implement and test a reusable `Result<T>` or small generic collection using the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence); review the course's [generics section](https://www.udemy.com/course/ultimate-csharp-masterclass/).
-- [ ] **Thursday (1.5h):** Study `IEnumerable<T>` vs `IQueryable<T>` and deferred execution using [EF Core querying documentation](https://learn.microsoft.com/en-us/ef/core/querying/); run the comparison experiment in the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
-- [ ] **Saturday (3h):** Add job creation, retrieval, filtering, validation, and PostgreSQL persistence using the [API course persistence sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) and the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
-- [ ] **Sunday (1.5h):** Add PostgreSQL integration tests, inspect generated SQL, and document ORM/query trade-offs using [ASP.NET Core integration-testing documentation](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests), [Testcontainers for .NET](https://dotnet.testcontainers.org/), and the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
+- [ ] **Thursday (1.5h):**
+
+  ***Study (0.5h):*** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Database and Entity Framework Core`, `Entity Relationships in EF Core`, and `Automated testing`; optionally use [HP — High Performance Coding with .NET Core and C#](https://www.udemy.com/course/high-performance-coding-with-net-core-and-csharp/) → `Measure Performance During Development Part 2` and `Data Access Performance: Entity Framework Core`, or [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Unit Testing - Application Core`. Review `IEnumerable<T>` vs `IQueryable<T>` and deferred execution in Microsoft's [EF Core querying documentation](https://learn.microsoft.com/en-us/ef/core/querying/).
+
+  ***Project (1h of today's 1.5h):*** Compare in-memory and PostgreSQL query behavior, inspect generated SQL, and record the data-access decision for the Job API using the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
+
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Implement Job creation, retrieval, filtering, validation, and PostgreSQL persistence using [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Database and Entity Framework Core`, `Entity Relationships in EF Core`, `Pagination, Filtering & Sorting`, and `Service Layer`, plus the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Add PostgreSQL integration tests, inspect generated SQL, and document ORM/query trade-offs using [ASP.NET Core integration-testing documentation](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests), [Testcontainers for .NET](https://dotnet.testcontainers.org/), and the [Week 2 workbook section](../labs/phase-02-software-engineering-foundations.md#week-2-generics-linq-and-postgresql-persistence).
 
 **Deliverables:** Working persistence, integration tests, a brief comparison of data-access approaches.
 
@@ -104,19 +120,24 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 **Goal:** Distinguish asynchronous I/O, concurrency, and parallel execution.
 
-### Week 3 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `.NET under the hood` → async/await and task fundamentals. If the distinction is unclear, use [MT — Master Multithreading & Asynchronous Programming in C#/.NET](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) → `Task based Asynchronous Programming` and `Async & Await` → task execution and async/await basics. Contrast asynchronous I/O with Microsoft's [asynchronous programming guidance](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/).
+  ***Study:*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Multithreading & asynchrony` for `Task`, `async`/`await`, and cancellation. If needed, use [MT — Master Multithreading & Asynchronous Programming in C#/.NET](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) → `Task based Asynchronous Programming` and `Async & Await`; Microsoft's [asynchronous programming guide](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/) covers CPU-bound vs I/O-bound work.
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `.NET under the hood` → cancellation, task exceptions, and multithreading subsections. Optionally use [MT — Master Multithreading & Asynchronous Programming in C#/.NET](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) → `Threads Synchronization` → critical sections and thread safety. Supplement with Microsoft's [worker services documentation](https://learn.microsoft.com/en-us/dotnet/core/extensions/workers) and [hosted services documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services).
+  ***Project (1h):*** Compare synchronous and asynchronous file or HTTP calls, then apply asynchronous I/O and cancellation to one Job API operation using Microsoft's [asynchronous programming guide](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/) and the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+- [ ] **Thursday (1.5h):**
 
-**Skip:** extensive GUI/thread-affinity examples. **Evidence:** async vs thread experiment, bounded worker, cancellation test.
+  ***Study (0.5h):*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Multithreading & asynchrony`; [MT — Master Multithreading & Asynchronous Programming in C#/.NET](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) → `Threads Synchronization` and `Concurrent Collections` for thread safety and concurrency. Microsoft's [worker services documentation](https://learn.microsoft.com/en-us/dotnet/core/extensions/workers) covers `SemaphoreSlim`, `Channel<T>`, and bounded workers.
 
-- [ ] **Monday (1h):** Study `Task`, `async`/`await`, cancellation, and CPU-bound vs I/O-bound work using the [C# course async sections](https://www.udemy.com/course/ultimate-csharp-masterclass/) and Microsoft's [asynchronous programming guide](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/).
-- [ ] **Tuesday (1h):** Compare synchronous and asynchronous file or HTTP calls using Microsoft's [asynchronous programming guide](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/) and the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
-- [ ] **Thursday (1.5h):** Study thread pools, `SemaphoreSlim`, `Channel<T>`, races, and bounded concurrency in the [multithreading course](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) and Microsoft's [worker services documentation](https://learn.microsoft.com/en-us/dotnet/core/extensions/workers); run the workbook experiments in the [Week 3 section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
-- [ ] **Saturday (3h):** Add the bounded background job processor and cancellation support using Microsoft's [hosted services documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services) and the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
-- [ ] **Sunday (1.5h):** Test concurrency limits, cancellation, graceful shutdown, and failure cases using [worker services documentation](https://learn.microsoft.com/en-us/dotnet/core/extensions/workers) and the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+  ***Project (1h of today's 1.5h):*** Test cancellation, concurrency limits, and bounded queue behavior in the Job API worker using the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Add the bounded background job processor and cancellation support using Microsoft's [hosted services documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services) and the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Add tests for concurrency limits, cancellation, graceful shutdown, and failure cases using [worker services documentation](https://learn.microsoft.com/en-us/dotnet/core/extensions/workers) and the [Week 3 workbook section](../labs/phase-02-software-engineering-foundations.md#week-3-async-cancellation-and-bounded-concurrency).
 
 **Deliverables:** Bounded background worker, tests, short concurrency experiment report.
 
@@ -126,19 +147,23 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 **Goal:** Apply modular design and make architectural decisions explicit.
 
-### Week 4 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` → interfaces and dependency inversion subsections. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Preliminary Concepts` → SOLID and dependency inversion, or [DP — Design Patterns in C# and .NET](https://www.udemy.com/course/design-patterns-csharp-dotnet/) → `The SOLID Design Principles`. Supplement with Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection).
+  ***Study:*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Object-Oriented Programming: Polymorphism, Inheritance, Interfaces` for interfaces and dependency inversion. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Preliminary Concepts`, or [DP — Design Patterns in C# and .NET](https://www.udemy.com/course/design-patterns-csharp-dotnet/) → `The SOLID Design Principles`; supplement with Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection).
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → review the project-structure and testing sections in the expanded outline, focusing on service boundaries and test placement. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Setting up the Application Core` and `Setting up Infrastructure Projects` → application/infrastructure boundaries. Use the remaining time to compare layered and vertical-slice approaches for the Job API.
+  ***Project (1h):*** Refactor one tightly coupled Job API component into a testable interface and implementation; keep the boundary justified by the current requirements using [SOLID principles](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) and the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
+- [ ] **Thursday (1.5h):**
 
-**Skip:** blindly adopting MediatR or five project layers. **Evidence:** one justified architecture ADR and refactored modules.
+  ***Study (0.5h):*** [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Setting up the Application Core` and `Setting up Infrastructure Projects` for application/infrastructure boundaries; [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Service Layer` and `Project organization and refactoring`; compare the approaches for the Job API.
 
-- [ ] **Monday (1h):** Study SOLID, cohesion, coupling, composition, and dependency inversion using the [C# interfaces section](https://www.udemy.com/course/ultimate-csharp-masterclass/) and Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection).
-- [ ] **Tuesday (1h):** Refactor a tightly coupled component into testable interfaces and implementations using [SOLID principles](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) and the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
-- [ ] **Thursday (1.5h):** Study layered architecture, Clean Architecture trade-offs, DI lifetimes, and API boundaries using the [Clean Architecture course sections](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) `Setting up the Application Core` and `Setting up Infrastructure Projects`.
-- [ ] **Saturday (3h):** Refactor the Job Management API into clear modules and add focused boundary tests using the [API course structure and testing sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) and the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
-- [ ] **Sunday (1.5h):** Run the full test suite, write an ADR, create an architecture diagram, and complete the retrospective using Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) and the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
+  ***Project (1h of today's 1.5h):*** Choose and document the simplest suitable Job API module boundaries; record dependency direction and test seams in the Week 4 architecture decision record using the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Refactor the Job Management API into clear modules and add focused boundary tests using [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Service Layer`, `Project organization and refactoring`, and `Automated testing`, plus the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Run the full test suite, write an ADR, create an architecture diagram, and complete the retrospective using Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) and the [Week 4 workbook section](../labs/phase-02-software-engineering-foundations.md#week-4-design-boundaries-and-architecture).
 
 **Deliverables:** Modular API, module tests, ADR, architecture diagram, retrospective.
 
@@ -146,7 +171,7 @@ The detailed weekly assignments below contain the specific Udemy section and sub
 
 ## Resources
 
-The Udemy links and week-specific selections are in the **Udemy course key and section selection** and **Detailed weekly course assignments** sections above.
+The Udemy links and week-specific selections are in the **Udemy course key and section selection** and **Weekly schedule** sections above.
 
 
 - [C# documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
@@ -182,19 +207,24 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 **Goal:** Make the API predictable, secure, and independently testable.
 
-### Week 5 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → validation, error handling, middleware, and Problem Details sections in the expanded outline. If more detail is needed, use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Creating the API project` → custom exceptions, global error handling, and middleware subsections. Match the current lecture titles rather than relying on lecture numbers.
+  ***Study:*** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Validation`, `ASP.NET Core request pipeline`, and `Endpoint filters and action filters` for request errors and validation. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Creating the API project`; use Microsoft's [Problem Details guidance](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling-api) for HTTP semantics and error responses.
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → Identity, JWT, authorization, and API documentation sections in the expanded outline. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Securing API and UI` → JWT and Identity subsections. Supplement with Microsoft's [ASP.NET Core authorization documentation](https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction) and [Problem Details documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling-api).
+  ***Project (1h):*** Implement and test correct DI lifetimes in the Job API, including a test or example that exposes a captive-dependency error, using Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) and the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
+- [ ] **Thursday (1.5h):**
 
-**Skip:** Blazor client/UI implementation. **Evidence:** OpenAPI contract, standardized errors, authorization tests.
+  ***Study (0.5h):*** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `User management with ASP.NET Core Identity` and `JWT authentication and authorization`; optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Securing API and UI`. Supplement with Microsoft's [authorization documentation](https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction) for least privilege and authorization.
 
-- [ ] **Monday (1h):** Study HTTP semantics (201/202/400/401/403/404/409), Problem Details, versioning, and dependency injection lifetimes using the [API course validation and error-handling sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) and Microsoft's [Problem Details guidance](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling-api).
-- [ ] **Tuesday (1h):** Create and correct the DI lifetime/captive-dependency lab using Microsoft's [dependency-injection documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) and the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
-- [ ] **Thursday (1.5h):** Study authentication versus authorization, input validation, secrets management, and least privilege using Microsoft's [authorization documentation](https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction) and the API course's [Identity and JWT sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/); draft the threat model using the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
-- [ ] **Saturday (3h):** Implement request DTOs, validation/error responses, OpenAPI, authentication, and authorization using the [API course sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) and the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security). Add pagination if not complete.
-- [ ] **Sunday (1.5h):** Write contract/security integration tests and document trust boundaries using Microsoft's [ASP.NET Core integration-testing documentation](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests) and the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
+  ***Project (1h of today's 1.5h):*** Draft the Job API threat model, identify trust boundaries and authorization risks, and turn the highest risks into implementation or test tasks using the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
+
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Implement request DTOs, validation/error responses, OpenAPI, authentication, and authorization using [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `DTOs`, `Validation`, `Pagination, Filtering & Sorting`, `User management with ASP.NET Core Identity`, and `JWT authentication and authorization`, plus the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Write contract and authorization integration tests, update the OpenAPI contract, and document trust boundaries using Microsoft's [ASP.NET Core integration-testing documentation](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests) and the [Week 5 workbook section](../labs/phase-02-software-engineering-foundations.md#week-5-api-contracts-validation-and-security).
 
 **Deliverables:** Versioned API contract, validation tests, authorization policy, `docs/security.md`, and an updated OpenAPI specification.
 
@@ -204,19 +234,23 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 **Goal:** Prevent duplicate business outcomes and lost updates when clients retry or workers race.
 
-### Week 6 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → EF Core, persistence, and application-layer sections in the expanded outline. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Setting up the Application Core` and `Setting up Infrastructure Projects` → application core, infrastructure, and EF Core subsections. Focus on architectural trade-offs rather than copying either course's stack.
+  ***Study:*** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Database and Entity Framework Core`, `Entity Relationships in EF Core`, and `Service Layer` for persistence boundaries. Optionally use [CA — ASP.NET Core - SOLID and Clean Architecture](https://www.udemy.com/course/aspnet-core-solid-and-clean-architecture-net-5-and-up/) → `Setting up the Application Core` and `Setting up Infrastructure Projects`; use PostgreSQL's [transaction isolation documentation](https://www.postgresql.org/docs/current/transaction-iso.html) and Microsoft's [EF Core transactions documentation](https://learn.microsoft.com/en-us/ef/core/saving/transactions) for transactions, concurrency, and idempotency.
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** Use [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) design-pattern material only when it clarifies the job lifecycle. Optionally use [DP — Design Patterns in C# and .NET](https://www.udemy.com/course/design-patterns-csharp-dotnet/) → behavioral-pattern sections → `State` and `Strategy`; do not study the full Gang of Four catalogue. Read PostgreSQL's [transaction isolation documentation](https://www.postgresql.org/docs/current/transaction-iso.html) and Microsoft's [EF Core concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency).
+  ***Project (1h):*** Reproduce a two-client optimistic-concurrency conflict and apply the chosen resolution behavior to a Job API state update using Microsoft's [EF Core concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency) and the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
+- [ ] **Thursday (1.5h):**
 
-**Skip:** implementing patterns without a demonstrated need. **Evidence:** concurrency-safe job state changes, idempotency-key test, design trade-off note.
+  ***Study (0.5h):*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Design Patterns`; optionally use [DP — Design Patterns in C# and .NET](https://www.udemy.com/course/design-patterns-csharp-dotnet/) → `State` and `Strategy` for job-state design. Use PostgreSQL's [transaction isolation documentation](https://www.postgresql.org/docs/current/transaction-iso.html) for transaction behavior and retries.
 
-- [ ] **Monday (1h):** Study database transaction boundaries, isolation levels, optimistic concurrency, and idempotency keys using PostgreSQL's [transaction isolation documentation](https://www.postgresql.org/docs/current/transaction-iso.html) and Microsoft's [EF Core transactions documentation](https://learn.microsoft.com/en-us/ef/core/saving/transactions).
-- [ ] **Tuesday (1h):** Build the two-client optimistic-concurrency experiment using Microsoft's [EF Core concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency) and the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
-- [ ] **Thursday (1.5h):** Study transient versus permanent errors, exponential backoff with jitter, timeouts, and why retries must respect idempotency using the API course's [persistence and error-handling sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) and PostgreSQL's [transaction isolation documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
-- [ ] **Saturday (3h):** Implement transactional idempotency, optimistic concurrency, safe state transitions, and bounded retries using the API course's [EF Core/persistence sections](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/), Microsoft's [EF Core concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency), and the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
-- [ ] **Sunday (1.5h):** Test duplicate submissions, conflicting payloads, concurrent updates, rollback, and worker restart using Microsoft's [EF Core transactions](https://learn.microsoft.com/en-us/ef/core/saving/transactions) and [concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency), plus the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
+  ***Project (1h of today's 1.5h):*** Define and test allowed Job state transitions, idempotency behavior, and retry boundaries; record unresolved transaction decisions in the Week 6 decision note.
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Implement transactional idempotency, optimistic concurrency, safe state transitions, and bounded retries using [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Database and Entity Framework Core`, `Entity Relationships in EF Core`, `Service Layer`, and `Advanced business logic`, Microsoft's [EF Core concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency), and the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Test duplicate submissions, conflicting payloads, concurrent updates, rollback, and worker restart using Microsoft's [EF Core transactions](https://learn.microsoft.com/en-us/ef/core/saving/transactions) and [concurrency documentation](https://learn.microsoft.com/en-us/ef/core/saving/concurrency), plus the [Week 6 workbook section](../labs/phase-02-software-engineering-foundations.md#week-6-transactions-idempotency-and-optimistic-concurrency). Finish the idempotency ADR with observed results.
 
 **Deliverables:** Idempotent job creation, tested job state transitions, concurrency-safe updates, transaction tests, and `docs/decisions/ADR-00X-idempotency.md`.
 
@@ -226,19 +260,24 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 **Goal:** Make failures diagnosable and demonstrate evidence-based performance improvement.
 
-### Week 7 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `.NET under the hood`, `Advanced C# types`, and `Collections` → CPU, memory, and allocation subsections. Optionally use [HP — High Performance Coding with .NET Core and C#](https://www.udemy.com/course/high-performance-coding-with-net-core-and-csharp/) → `Measure Performance During Development Part 1`, `Measure Performance During Development Part 2`, and `Performance Monitoring in Production for .NET Core`. Supplement with Microsoft's [.NET diagnostics documentation](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/) and [BenchmarkDotNet documentation](https://benchmarkdotnet.org/articles/overview.html) because HP uses older .NET-era tooling.
+  ***Study:*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `.NET under the hood`, `Advanced C# types`, `Collections`, and `Multithreading & asynchrony`; optionally use [HP — High Performance Coding with .NET Core and C#](https://www.udemy.com/course/high-performance-coding-with-net-core-and-csharp/) → `Measure Performance During Development Part 1`, `Measure Performance During Development Part 2`, and `Performance Monitoring in Production for .NET Core`. Supplement with [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/) and Microsoft's [.NET diagnostics documentation](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/) for logging, tracing, metrics, and service-level indicators.
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `.NET under the hood` and `Advanced C# types` → concurrency and synchronization subsections. If the race or locking experiment needs more depth, use [MT — Master Multithreading & Asynchronous Programming in C#/.NET](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) → `Threads Synchronization` and `Concurrent Collections` → thread safety and collection-selection subsections. Use current [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/), Microsoft's [health-check documentation](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks), and [Testcontainers for .NET documentation](https://dotnet.testcontainers.org/) for modern tooling.
+  ***Project (1h):*** Establish a repeatable Job API workload, capture a baseline with `dotnet-counters`, a profiler, or BenchmarkDotNet, and record the measurement limits using Microsoft's [.NET diagnostics documentation](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/) and the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+- [ ] **Thursday (1.5h):**
 
-**Skip:** treating an old profiler walkthrough as current tooling guidance. **Evidence:** before/after performance measurements, trace/metric samples, failure test.
+  ***Study (0.5h):*** [CS — Ultimate C# Masterclass](https://www.udemy.com/course/ultimate-csharp-masterclass/) → `Multithreading & asynchrony` and `Advanced C# types`; optionally use [MT — Master Multithreading & Asynchronous Programming in C#/.NET](https://www.udemy.com/course/master-multithreading-asynchronous-programming-in-csharp-dotnet/) → `Threads Synchronization` and `Concurrent Collections`. Use Microsoft's [health-check documentation](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks) and [hosted services documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services) for readiness, timeouts, and graceful shutdown.
 
-- [ ] **Monday (1h):** Study structured logging, log levels, correlation IDs, OpenTelemetry traces, metrics, and useful service-level indicators using [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/) and Microsoft's [.NET diagnostics documentation](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/).
-- [ ] **Tuesday (1h):** Profile a repeatable small workload with `dotnet-counters`, a profiler, or BenchmarkDotNet using Microsoft's [.NET diagnostics documentation](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/) and the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
-- [ ] **Thursday (1.5h):** Study health checks, readiness versus liveness, timeout budgets, retry storms, and graceful shutdown using Microsoft's [health-check documentation](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks) and [hosted services documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services); document project improvements using the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
-- [ ] **Saturday (3h):** Add structured logs, correlation, tracing, metrics, health endpoints, timeouts, and a load-test script using [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/), Microsoft's [health-check documentation](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks), and the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
-- [ ] **Sunday (1.5h):** Run baseline and failure-injection tests; record latency, throughput, memory, errors, and recovery using [.NET diagnostics](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/), [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/), and the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+  ***Project (1h of today's 1.5h):*** Select an evidence-backed improvement, implement or document it, and define a failure signal and recovery check using the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Add structured logs, correlation, tracing, metrics, health endpoints, timeouts, and a repeatable load-test script using [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/), Microsoft's [health-check documentation](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks), and the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Run baseline and failure-injection tests; record latency, throughput, memory, errors, and recovery using [.NET diagnostics](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/), [OpenTelemetry for .NET](https://opentelemetry.io/docs/languages/net/), and the [Week 7 workbook section](../labs/phase-02-software-engineering-foundations.md#week-7-observability-profiling-and-resilience).
 
 **Deliverables:** Telemetry dashboard or captured traces, `docs/operations.md`, benchmark results, and a failure-mode table.
 
@@ -248,19 +287,23 @@ The Udemy links and week-specific selections are in the **Udemy course key and s
 
 **Goal:** Deliver a reproducible, reviewable portfolio project and verify understanding without relying on AI.
 
-### Week 8 — Course assignments
+- [ ] **Monday (1h):**
 
-**Monday (1h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → unit and integration-testing sections in the expanded outline. Optionally use [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Integration Testing - Testing the Data Access Layer` and `Using GitHub for Continuous Integration and Testing` → data-access integration tests and CI subsections. Read current [GitHub Actions documentation for .NET](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net); create the initial build workflow using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+  ***Study:*** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Automated testing`; optionally use [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Integration Testing - Testing the Data Access Layer` and `Using GitHub for Continuous Integration and Testing`. Supplement with Microsoft's [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/) and [GitHub Actions for .NET](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net) for contract tests, review, and workflow practices.
+- [ ] **Tuesday (1h):**
 
-**Thursday (1.5h):** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → revisit the unit and integration-testing sections for state transitions and failures. Use [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Unit Testing - Application Core` or `Integration Testing - Testing the Data Access Layer` only for unresolved testing gaps, then review current [GitHub Actions documentation for .NET](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net) and Microsoft's [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/).
+  ***Project (1h):*** Review the API without AI, create issues, and fix the highest-impact item using the [Week 8 design-review procedure](../labs/phase-02-software-engineering-foundations.md#design-review-without-ai) and Microsoft's [ASP.NET Core best practices](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices).
+- [ ] **Thursday (1.5h):**
 
-**Skip:** beginner GitHub account setup. **Evidence:** passing PR workflow, documented architectural review, final demonstration.
+  ***Study (0.5h):*** [API — Building ASP.NET Core REST APIs with an AI-Powered Workflow](https://www.udemy.com/course/building-aspnet-core-rest-apis-with-an-ai-powered-workflow/) → `Automated testing`; [TD — Test Driven Development in ASP.NET Core](https://www.udemy.com/course/test-driven-development-in-net-core-the-handbook/) → `Unit Testing - Application Core` and `Integration Testing - Testing the Data Access Layer`. Review Microsoft's [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/).
 
-- [ ] **Monday (1h):** Study test strategy (unit/integration/contract), code review, supply-chain security, and deployment/rollback basics using Microsoft's [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/) and [GitHub Actions for .NET](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net).
-- [ ] **Tuesday (1h):** Review the API without AI, create issues, and fix the highest-impact item using the [Week 8 design-review procedure](../labs/phase-02-software-engineering-foundations.md#design-review-without-ai) and Microsoft's [ASP.NET Core best practices](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices).
-- [ ] **Thursday (1.5h):** Add or refine CI, analyzers, unit/integration tests, and dependency scanning using [GitHub Actions for .NET](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net) and [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/); build a container only if a free local runtime is available. Verify a clean checkout using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
-- [ ] **Saturday (3h):** Finalize documentation, diagrams, ADRs, reproducible local PostgreSQL setup, and demo using Microsoft's [containerize a .NET application guide](https://learn.microsoft.com/en-us/dotnet/core/docker/introduction); Docker Compose is optional. Perform the worker-crash/recovery demonstration using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
-- [ ] **Sunday (1.5h):** Complete the Phase 2 assessment and retrospective, update the skill matrix, and identify concepts to review before Phase 3 using [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/) and the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+  ***Project (1h of today's 1.5h):*** Add or refine CI, analyzers, unit/integration tests, and dependency scanning using [GitHub Actions for .NET](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net) and [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/); build a container only if a free local runtime is available. Verify a clean checkout using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+- [ ] **Saturday (3h):**
+
+  ***Project (3h):*** Finalize documentation, diagrams, ADRs, reproducible local PostgreSQL setup, and demo using Microsoft's [containerize a .NET application guide](https://learn.microsoft.com/en-us/dotnet/core/docker/introduction); Docker Compose is optional. Perform the worker-crash/recovery demonstration using the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
+- [ ] **Sunday (1.5h):**
+
+  ***Project (1.5h):*** Complete the Phase 2 assessment and retrospective, update the skill matrix, and identify concepts to review before Phase 3 using [.NET testing documentation](https://learn.microsoft.com/en-us/dotnet/core/testing/) and the [Week 8 workbook section](../labs/phase-02-software-engineering-foundations.md#week-8-cicd-architecture-review-and-release).
 
 **Deliverables:** Versioned release, passing CI or reproducible local checks, runnable local setup, architecture pack, failure demo, and Phase 2 retrospective.
 

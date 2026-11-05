@@ -19,6 +19,8 @@ Step-by-step procedures for Phase 1 tasks, labs, guided exercises, and tabletops
 
 Each daily checklist item presents *Study* (course/video or documentation) and *Lab exercise* (the hands-on task, workbook procedure, or tabletop) on separate lines, with space between them for easier scanning. Some days have only one section when that is all the day's plan requires.
 
+The **Phase 1 project** is a cumulative DBA operations evidence pack, built from the weekly inventories, diagrams, runbooks, decision records, and tabletop results. Project time shown below is drawn from the existing lab/evidence work and included in that day's stated duration; it does not add to the 8-hour weekly budget.
+
 ## Course and walkthrough map
 
 Use about **1–2 hours of course/video material per week**; these courses are longer than the schedule, so watch only the sections that support that week's lab. Complete the project work in the daily plan rather than watching an entire course. Course ratings, curriculum, and subscription access can change.
@@ -40,29 +42,37 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `Introduction`, database/RDBMS/SQL Server overview.
+  ***Study:*** [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `Introduction`, database/RDBMS/SQL Server overview.
 
-  *Lab exercise:* Complete the Phase 1 baseline using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#baseline-self-assessment).
+  ***Lab exercise:*** Complete the Phase 1 baseline using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#baseline-self-assessment).
 - [ ] **Tuesday (1h):**
 
-  *Study:* [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `Microsoft SQL Database Administration and System databases`, management tools and system databases.
+  ***Study:*** [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `Microsoft SQL Database Administration and System databases`, management tools and system databases.
 
-  *Lab exercise:* Sketch the database service path using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#database-service-path-sketch).
+  ***Lab exercise:*** Sketch the database service path using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#database-service-path-sketch).
+
+  ***Project (0.25h of today's 1h):*** Add the service-path sketch to the DBA evidence pack and label each component as personally performed, observed, studied, or unknown.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* Review Windows/Linux service, process, storage, permissions, and log basics; study [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `MSSQL User Management` and `SQL Server Agent`.
+  ***Study:*** Review Windows/Linux service, process, storage, permissions, and log basics; study [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `MSSQL User Management` and `SQL Server Agent`.
 
-  *Lab exercise:* Draft the incident/change handoff using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#windowslinux-and-incidentchange-workflow).
+  ***Lab exercise:*** Draft the incident/change handoff using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#windowslinux-and-incidentchange-workflow).
+
+  ***Project (0.5h of today's 1.5h):*** Turn the handoff into a reusable incident/change workflow with escalation, rollback, and validation checkpoints.
 - [ ] **Saturday (3h):**
 
-  *Study:* Review [SQL Server administration sections](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) and [SQL Server documentation](https://learn.microsoft.com/en-us/sql/sql-server/).
+  ***Study:*** Review [SQL Server administration sections](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) and [SQL Server documentation](https://learn.microsoft.com/en-us/sql/sql-server/).
 
-  *Lab exercise:* Build the four-platform inventory and comparison matrix using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#four-platform-inventory-and-comparison-matrix). Use work/project evidence and do not infer experience.
+  ***Lab exercise:*** Build the four-platform inventory and comparison matrix using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#four-platform-inventory-and-comparison-matrix). Use work/project evidence and do not infer experience.
+
+  ***Project (1h of today's 3h):*** Assemble the Oracle, SQL Server, Azure SQL, and Db2 inventory with source notes and evidence labels.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* Revisit [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `Introduction` and `Microsoft SQL Database Administration and System databases`.
+  ***Study:*** Revisit [Complete Microsoft SQL Server Database Administration Course](https://www.udemy.com/course/complete-microsoft-sql-server-database-administration-course/) — `Introduction` and `Microsoft SQL Database Administration and System databases`.
 
-  *Lab exercise:* Reconcile baseline scores and finish the operations workflow using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#baseline-and-workflow-review).
+  ***Lab exercise:*** Reconcile baseline scores and finish the operations workflow using the [Week 1 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#baseline-and-workflow-review).
+
+  ***Project (0.5h of today's 1.5h):*** Review the evidence pack for unsupported claims, finalize the baseline, and list the first gaps to address in Week 2.
 
 **Deliverables:** Platform comparison, skills baseline, incident/change workflow.  
 **Self-check:** Can you describe what you have actually operated, what you have only studied, and the path an application request takes to each database?
@@ -73,29 +83,37 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* Oracle instance/database architecture, CDB/PDB concepts, services, listener connectivity, and basic operational views in [Oracle Database 19c Concepts](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/).
+  ***Study:*** Oracle instance/database architecture, CDB/PDB concepts, services, listener connectivity, and basic operational views in [Oracle Database 19c Concepts](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/).
 
-  *Lab exercise:* Note the architecture terms and operational views you will verify during the week's state inspection.
+  ***Lab exercise:*** Note the architecture terms and operational views you will verify during the week's state inspection.
 - [ ] **Tuesday (1h):**
 
-  *Study:* [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Backup and Recovery Overview` and `Recovery Manager (RMAN)`.
+  ***Study:*** [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Backup and Recovery Overview` and `Recovery Manager (RMAN)`.
 
-  *Lab exercise:* Complete the [Oracle state inspection exercise](../labs/phase-01-enterprise-dba-bridge.md#oracle-state-inspection). Capture sanitized evidence or label the work documentation-only if no lab is available.
+  ***Lab exercise:*** Complete the [Oracle state inspection exercise](../labs/phase-01-enterprise-dba-bridge.md#oracle-state-inspection). Capture sanitized evidence or label the work documentation-only if no lab is available.
+
+  ***Project (0.25h of today's 1h):*** Add the Oracle version, observed state, evidence type, and any environment limits to the operations pack.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Monitoring an RMAN Backup` and `Recovery Catalog`; review OEM/OMS monitoring, alert triage, patching lifecycle, and RMAN backup validation.
+  ***Study:*** [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Monitoring an RMAN Backup` and `Recovery Catalog`; review OEM/OMS monitoring, alert triage, patching lifecycle, and RMAN backup validation.
 
-  *Lab exercise:* Compare signals using the [Week 2 monitoring procedure](../labs/phase-01-enterprise-dba-bridge.md#monitoring-signal-comparison).
+  ***Lab exercise:*** Compare signals using the [Week 2 monitoring procedure](../labs/phase-01-enterprise-dba-bridge.md#monitoring-signal-comparison).
+
+  ***Project (0.5h of today's 1.5h):*** Record the monitoring signals, alert triage, and backup-validation checks in the Oracle operations notes.
 - [ ] **Saturday (3h):**
 
-  *Study:* [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Creating Database Backups` and matching restore/recovery demonstrations.
+  ***Study:*** [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Creating Database Backups` and matching restore/recovery demonstrations.
 
-  *Lab exercise:* Complete the [single-instance RMAN recovery lab](../labs/phase-01-enterprise-dba-bridge.md#single-instance-rman-recovery) in an authorized environment, or use its tabletop alternative. Do not describe this as RAC or ExaCC recovery.
+  ***Lab exercise:*** Complete the [single-instance RMAN recovery lab](../labs/phase-01-enterprise-dba-bridge.md#single-instance-rman-recovery) in an authorized environment, or use its tabletop alternative. Do not describe this as RAC or ExaCC recovery.
+
+  ***Project (1h of today's 3h):*** Capture the recovery objective, steps, validation evidence, and limitations; clearly distinguish an executed lab from a tabletop.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* Revisit [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Backup and Recovery Configuration` and `Recovery Manager (RMAN)`.
+  ***Study:*** Revisit [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) — `Backup and Recovery Configuration` and `Recovery Manager (RMAN)`.
 
-  *Lab exercise:* Write the Oracle backup/recovery runbook using the [Week 2 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#oracle-backuprecovery-runbook).
+  ***Lab exercise:*** Write the Oracle backup/recovery runbook using the [Week 2 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#oracle-backuprecovery-runbook).
+
+  ***Project (0.5h of today's 1.5h):*** Finalize the RMAN runbook with prerequisites, recovery checks, evidence, and version-specific cautions.
 
 **Deliverables:** Lab record and Oracle recovery runbook.  
 **Self-check:** Can you explain what was actually restored, how you verified it, and which production safeguards were not represented in the lab?
@@ -106,29 +124,37 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* [Oracle Grid Infrastructure and RAC](https://www.udemy.com/course/oracle-rac-and-grid-infrastructure-concepts/) — `Introduction to Grid Infrastructure 19c` and `Introduction to RAC`; review RAC, ASM, and Data Guard purposes.
+  ***Study:*** [Oracle Grid Infrastructure and RAC](https://www.udemy.com/course/oracle-rac-and-grid-infrastructure-concepts/) — `Introduction to Grid Infrastructure 19c` and `Introduction to RAC`; review RAC, ASM, and Data Guard purposes.
 
-  *Lab exercise:* Create the glossary using the [Week 3 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#oracle-ha-glossary).
+  ***Lab exercise:*** Create the glossary using the [Week 3 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#oracle-ha-glossary).
 - [ ] **Tuesday (1h):**
 
-  *Study:* [RAC course](https://www.udemy.com/course/oracle-rac-and-grid-infrastructure-concepts/) — `Setup Shared Storage` and `Explore Grid Infrastructure`; [Data Guard course](https://www.udemy.com/course/oracle-12c-data-guard-administration/) — `Introduction to Oracle Data Guard`.
+  ***Study:*** [RAC course](https://www.udemy.com/course/oracle-rac-and-grid-infrastructure-concepts/) — `Setup Shared Storage` and `Explore Grid Infrastructure`; [Data Guard course](https://www.udemy.com/course/oracle-12c-data-guard-administration/) — `Introduction to Oracle Data Guard`.
 
-  *Lab exercise:* Draw RAC/ASM and Data Guard failure domains using the [Week 3 Oracle HA guide](../labs/phase-01-enterprise-dba-bridge.md#week-3-oracle-ha-and-exacc-boundaries). Label paths as conceptual, observed, or lab-tested.
+  ***Lab exercise:*** Draw RAC/ASM and Data Guard failure domains using the [Week 3 Oracle HA guide](../labs/phase-01-enterprise-dba-bridge.md#week-3-oracle-ha-and-exacc-boundaries). Label paths as conceptual, observed, or lab-tested.
+
+  ***Project (0.25h of today's 1h):*** Add the failure-domain diagram to the evidence pack and label each path by evidence level.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* [Foundation to Oracle Database in OCI](https://www.udemy.com/course/foundation-to-oracle-database-in-oracle-cloud-infrastructure/) — `Oracle Cloud Infrastructure (Gen2 Cloud)`, `Database Cloud Services`, and the ExaCC lecture; optionally review the [GoldenGate course](https://www.udemy.com/course/oracle-goldengate-19c-learn-and-master-oracle-goldengate-w/).
+  ***Study:*** [Foundation to Oracle Database in OCI](https://www.udemy.com/course/foundation-to-oracle-database-in-oracle-cloud-infrastructure/) — `Oracle Cloud Infrastructure (Gen2 Cloud)`, `Database Cloud Services`, and the ExaCC lecture; optionally review the [GoldenGate course](https://www.udemy.com/course/oracle-goldengate-19c-learn-and-master-oracle-goldengate-w/).
 
-  *Lab exercise:* Complete the responsibility diagram using the [Week 3 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#ociexacc-responsibility-diagram).
+  ***Lab exercise:*** Complete the responsibility diagram using the [Week 3 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#ociexacc-responsibility-diagram).
+
+  ***Project (0.5h of today's 1.5h):*** Record which OCI/ExaCC responsibilities belong to the customer, Oracle, and shared operations, citing the source for each boundary.
 - [ ] **Saturday (3h):**
 
-  *Study:* [RAC course](https://www.udemy.com/course/oracle-rac-and-grid-infrastructure-concepts/) — `Introduction to RAC`, or [Data Guard course](https://www.udemy.com/course/oracle-12c-data-guard-administration/) — `Implementing Oracle Data Guard using SQL*Plus`.
+  ***Study:*** [RAC course](https://www.udemy.com/course/oracle-rac-and-grid-infrastructure-concepts/) — `Introduction to RAC`, or [Data Guard course](https://www.udemy.com/course/oracle-12c-data-guard-administration/) — `Implementing Oracle Data Guard using SQL*Plus`.
 
-  *Lab exercise:* Complete one authorized RAC or Data Guard walkthrough, or follow the [Week 3 tabletop](../labs/phase-01-enterprise-dba-bridge.md#week-3-oracle-ha-and-exacc-boundaries) if no lab is available.
+  ***Lab exercise:*** Complete one authorized RAC or Data Guard walkthrough, or follow the [Week 3 tabletop](../labs/phase-01-enterprise-dba-bridge.md#week-3-oracle-ha-and-exacc-boundaries) if no lab is available.
+
+  ***Project (1h of today's 3h):*** Add the walkthrough or tabletop record, including scenario, role-transition outcome, validation, and what was not tested.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* [Data Guard course](https://www.udemy.com/course/oracle-12c-data-guard-administration/) — `Oracle Data Guard Broker` and `Perform Role Transitions`.
+  ***Study:*** [Data Guard course](https://www.udemy.com/course/oracle-12c-data-guard-administration/) — `Oracle Data Guard Broker` and `Perform Role Transitions`.
 
-  *Lab exercise:* Create the Oracle HA decision tree and ExaCC boundary diagram using the [Week 3 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#oracle-ha-decision-tree-and-exacc-boundary-diagram).
+  ***Lab exercise:*** Create the Oracle HA decision tree and ExaCC boundary diagram using the [Week 3 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#oracle-ha-decision-tree-and-exacc-boundary-diagram).
+
+  ***Project (0.5h of today's 1.5h):*** Finalize the HA decision tree and bounded ExaCC/OCI brief with clear assumptions and evidence labels.
 
 **Deliverables:** Oracle HA decision tree, bounded ExaCC/OCI brief, and tested-or-tabletop evidence.  
 **Self-check:** Can you distinguish RAC availability from Data Guard disaster recovery and explain who operates which ExaCC components?
@@ -139,25 +165,33 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* [SQL Server 2025: Build Always On HA & DR Solutions](https://www.udemy.com/course/sqlserverag/) — `Introduction to SQL Server 2025 Always On`; focus on replicas, commit modes, failover, quorum, listeners, and availability databases.
+  ***Study:*** [SQL Server 2025: Build Always On HA & DR Solutions](https://www.udemy.com/course/sqlserverag/) — `Introduction to SQL Server 2025 Always On`; focus on replicas, commit modes, failover, quorum, listeners, and availability databases.
 - [ ] **Tuesday (1h):**
 
-  *Study:* Microsoft's [SQL Server backup and restore documentation](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases) — backup types, restore sequences, recovery models, log shipping/mirroring, and RPO/RTO trade-offs.
+  ***Study:*** Microsoft's [SQL Server backup and restore documentation](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases) — backup types, restore sequences, recovery models, log shipping/mirroring, and RPO/RTO trade-offs.
 
-  *Lab exercise:* Build the [restore decision checklist](../labs/phase-01-enterprise-dba-bridge.md#restore-decision-checklist).
+  ***Lab exercise:*** Build the [restore decision checklist](../labs/phase-01-enterprise-dba-bridge.md#restore-decision-checklist).
+
+  ***Project (0.25h of today's 1h):*** Add the restore decision checklist to the SQL Server recovery section of the evidence pack, including RPO/RTO assumptions.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* [SQL Server 2025: Build Always On HA & DR Solutions](https://www.udemy.com/course/sqlserverag/) — `Monitoring` and `Backup and Restore`; Microsoft's [Always On availability groups overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) — health signals, wait statistics/query plans, capacity indicators, and failover constraints.
+  ***Study:*** [SQL Server 2025: Build Always On HA & DR Solutions](https://www.udemy.com/course/sqlserverag/) — `Monitoring` and `Backup and Restore`; Microsoft's [Always On availability groups overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) — health signals, wait statistics/query plans, capacity indicators, and failover constraints.
+
+  ***Project (0.5h of today's 1.5h):*** Sketch the two-replica AG, quorum, listener, and application-validation flow; note which prerequisites still need verification.
 - [ ] **Saturday (3h):**
 
-  *Study:* [SQL Server 2025: Build Always On HA & DR Solutions](https://www.udemy.com/course/sqlserverag/) — `Essential SQL Server 2025 Always On High Availability Solution - Up and Running`.
+  ***Study:*** [SQL Server 2025: Build Always On HA & DR Solutions](https://www.udemy.com/course/sqlserverag/) — `Essential SQL Server 2025 Always On High Availability Solution - Up and Running`.
 
-  *Lab exercise:* Complete the [Always On failover lab](../labs/phase-01-enterprise-dba-bridge.md#week-4-sql-server-recovery-and-always-on) only in an authorized lab; otherwise use its tabletop alternative.
+  ***Lab exercise:*** Complete the [Always On failover lab](../labs/phase-01-enterprise-dba-bridge.md#week-4-sql-server-recovery-and-always-on) only in an authorized lab; otherwise use its tabletop alternative.
+
+  ***Project (1h of today's 3h):*** Record the planned failover, application verification, rollback, and data-loss boundary in the SQL Server evidence pack.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* Microsoft's [availability group prerequisites](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/availability-group-tutorial-prerequisites?view=sql-server-ver17).
+  ***Study:*** Microsoft's [availability group prerequisites](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/availability-group-tutorial-prerequisites?view=sql-server-ver17).
 
-  *Lab exercise:* Write the Always On operations runbook using the [Week 4 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#always-on-operations-runbook).
+  ***Lab exercise:*** Write the Always On operations runbook using the [Week 4 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#always-on-operations-runbook).
+
+  ***Project (0.5h of today's 1.5h):*** Finalize the failover runbook and recovery checklist with prerequisites, operator actions, and verification evidence.
 
 **Deliverables:** Always On failover runbook, recovery checklist, and lab/tabletop record.  
 **Self-check:** Can you explain the failover mode, quorum implications, expected data-loss boundary, and how you prove the application recovered?
@@ -168,27 +202,37 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* Microsoft's [Azure SQL overview](https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and [Introduction to Azure SQL Database for Beginners](https://www.udemy.com/course/introduction-to-azure-sql-database/) — `Creating your First Azure SQL Database`.
+  ***Study:*** Microsoft's [Azure SQL overview](https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and [Introduction to Azure SQL Database for Beginners](https://www.udemy.com/course/introduction-to-azure-sql-database/) — `Creating your First Azure SQL Database`.
 
-  *Lab exercise:* Compare Azure SQL Database, Managed Instance, and SQL Server on Azure VMs using the [Week 5 service-comparison procedure](../labs/phase-01-enterprise-dba-bridge.md#azure-sql-service-comparison-and-migration-decision).
+  ***Lab exercise:*** Compare Azure SQL Database, Managed Instance, and SQL Server on Azure VMs using the [Week 5 service-comparison procedure](../labs/phase-01-enterprise-dba-bridge.md#azure-sql-service-comparison-and-migration-decision).
+
+  ***Project (0.25h of today's 1h):*** Start the migration decision record with workload assumptions, service-model candidates, and open questions.
 - [ ] **Tuesday (1h):**
 
-  *Study:* Microsoft's [Azure SQL security documentation](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview) and the course's `Accessing Azure SQL Database` section.
+  ***Study:*** Microsoft's [Azure SQL security documentation](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview) and the course's `Accessing Azure SQL Database` section.
 
-  *Lab exercise:* Map identity, network connectivity, private access, permissions, encryption, and least privilege using the [Week 5 identity/network procedure](../labs/phase-01-enterprise-dba-bridge.md#azure-sql-identity-and-network-map).
+  ***Lab exercise:*** Map identity, network connectivity, private access, permissions, encryption, and least privilege using the [Week 5 identity/network procedure](../labs/phase-01-enterprise-dba-bridge.md#azure-sql-identity-and-network-map).
+
+  ***Project (0.25h of today's 1h):*** Add the identity and network trust boundaries to the migration decision record and cite the controls that need validation.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* [Introduction to Azure SQL Database for Beginners](https://www.udemy.com/course/introduction-to-azure-sql-database/) — `Managing your Azure SQL Database Server` and Microsoft's [Azure SQL monitoring documentation](https://learn.microsoft.com/en-us/azure/azure-sql/database/monitor-tune-overview); focus on diagnostics, backup/restore, maintenance boundaries, and migration assessment. Avoid creating billable resources without an approved budget.
+  ***Study:*** [Introduction to Azure SQL Database for Beginners](https://www.udemy.com/course/introduction-to-azure-sql-database/) — `Managing your Azure SQL Database Server` and Microsoft's [Azure SQL monitoring documentation](https://learn.microsoft.com/en-us/azure/azure-sql/database/monitor-tune-overview); focus on diagnostics, backup/restore, maintenance boundaries, and migration assessment. Avoid creating billable resources without an approved budget.
+
+  ***Project (0.5h of today's 1.5h):*** Add monitoring, backup/restore ownership, cost controls, and migration risks to the service comparison.
 - [ ] **Saturday (3h):**
 
-  *Study:* [Introduction to Azure SQL Database for Beginners](https://www.udemy.com/course/introduction-to-azure-sql-database/) — `Creating your First Azure SQL Database`; Microsoft's [SQL Server migration guidance](https://learn.microsoft.com/en-us/data-migration/sql-server/guide).
+  ***Study:*** [Introduction to Azure SQL Database for Beginners](https://www.udemy.com/course/introduction-to-azure-sql-database/) — `Creating your First Azure SQL Database`; Microsoft's [SQL Server migration guidance](https://learn.microsoft.com/en-us/data-migration/sql-server/guide).
 
-  *Lab exercise:* Complete the [Azure SQL service-selection and migration exercise](../labs/phase-01-enterprise-dba-bridge.md#week-5-azure-sql-service-selection). Use a paper exercise unless you have an authorized, cost-controlled subscription.
+  ***Lab exercise:*** Complete the [Azure SQL service-selection and migration exercise](../labs/phase-01-enterprise-dba-bridge.md#week-5-azure-sql-service-selection). Use a paper exercise unless you have an authorized, cost-controlled subscription.
+
+  ***Project (1h of today's 3h):*** Develop the service-selection and cutover plan, including prerequisites, rollback, validation, and a no-cost fallback.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* Revisit Microsoft's [Azure SQL overview](https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and the course's `Managing your Azure SQL Database` section.
+  ***Study:*** Revisit Microsoft's [Azure SQL overview](https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) and the course's `Managing your Azure SQL Database` section.
 
-  *Lab exercise:* Produce the one-page architecture decision record using the [Week 5 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#azure-sql-architecture-decision-record).
+  ***Lab exercise:*** Produce the one-page architecture decision record using the [Week 5 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#azure-sql-architecture-decision-record).
+
+  ***Project (0.5h of today's 1.5h):*** Finalize the Azure SQL architecture decision record with trade-offs, cost safeguards, and unresolved assumptions.
 
 **Deliverables:** Azure SQL service comparison, migration/cutover plan, and decision record.  
 **Self-check:** Can you justify PaaS vs IaaS for the workload and explain the operational tasks that shift to Microsoft versus remain with the team?
@@ -199,27 +243,35 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5) — product overview, instances, databases, storage, logs, client connectivity, and core terminology.
+  ***Study:*** [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5) — product overview, instances, databases, storage, logs, client connectivity, and core terminology.
 - [ ] **Tuesday (1h):**
 
-  *Study:* [DB2 For Beginners](https://www.udemy.com/course/db2-for-beginners/) — `DB2 Database Server Setup`; consult [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5).
+  ***Study:*** [DB2 For Beginners](https://www.udemy.com/course/db2-for-beginners/) — `DB2 Database Server Setup`; consult [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5).
 
-  *Lab exercise:* Complete the [Db2 capability comparison](../labs/phase-01-enterprise-dba-bridge.md#db2-capability-comparison).
+  ***Lab exercise:*** Complete the [Db2 capability comparison](../labs/phase-01-enterprise-dba-bridge.md#db2-capability-comparison).
+
+  ***Project (0.25h of today's 1h):*** Add Db2 terminology, comparable operational capabilities, and evidence limitations to the cross-platform inventory.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* [DB2 For Beginners](https://www.udemy.com/course/db2-for-beginners/) — `Performing CRUD Operations and Data Manipulation`, or use [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5) for a documentation-only recovery scenario.
+  ***Study:*** [DB2 For Beginners](https://www.udemy.com/course/db2-for-beginners/) — `Performing CRUD Operations and Data Manipulation`, or use [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5) for a documentation-only recovery scenario.
 
-  *Lab exercise:* Follow the [Db2 setup guided lab](../labs/phase-01-enterprise-dba-bridge.md#db2-setup-and-crud-walkthrough) if available.
+  ***Lab exercise:*** Follow the [Db2 setup guided lab](../labs/phase-01-enterprise-dba-bridge.md#db2-setup-and-crud-walkthrough) if available.
+
+  ***Project (0.5h of today's 1.5h):*** Record the CRUD setup path or documentation-only alternative, including any access or setup blockers.
 - [ ] **Saturday (3h):**
 
-  *Study:* [Python and DB2 App Development](https://www.udemy.com/course/python-and-db2-app-development-build-a-crud-application/) — `Building CRUD App: Part 1: Building the user interface` and `Building CRUD App: Part 2: Python and DB2 Interaction`.
+  ***Study:*** [Python and DB2 App Development](https://www.udemy.com/course/python-and-db2-app-development-build-a-crud-application/) — `Building CRUD App: Part 1: Building the user interface` and `Building CRUD App: Part 2: Python and DB2 Interaction`.
 
-  *Lab exercise:* Follow the Db2 setup/CRUD walkthrough or its documented fallback in the [Week 6 lab guide](../labs/phase-01-enterprise-dba-bridge.md#db2-setup-and-crud-walkthrough). Keep setup troubleshooting to 30 minutes and record blockers.
+  ***Lab exercise:*** Follow the Db2 setup/CRUD walkthrough or its documented fallback in the [Week 6 lab guide](../labs/phase-01-enterprise-dba-bridge.md#db2-setup-and-crud-walkthrough). Keep setup troubleshooting to 30 minutes and record blockers.
+
+  ***Project (1h of today's 3h):*** Add a sanitized Db2 CRUD workflow record with setup prerequisites, observed behavior, and explicit limits on what was verified.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5) — backup, logging, monitoring, and recovery topics.
+  ***Study:*** [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/11.5) — backup, logging, monitoring, and recovery topics.
 
-  *Lab exercise:* Write the Db2 operations primer using the [Week 6 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#db2-operations-primer).
+  ***Lab exercise:*** Write the Db2 operations primer using the [Week 6 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#db2-operations-primer).
+
+  ***Project (0.5h of today's 1.5h):*** Finalize the Db2 operations primer with backup, logging, monitoring, recovery, and escalation references.
 
 **Deliverables:** Db2 comparison and operations primer.  
 **Self-check:** Can you navigate Db2 terminology and identify the correct documentation or owner without claiming independent administration experience?
@@ -230,27 +282,35 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) — `Using Time Model` and `Wait Events`; [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) — `INDEXES` and `STATISTICS`. Distinguish symptoms, bottlenecks, and capacity constraints.
+  ***Study:*** [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) — `Using Time Model` and `Wait Events`; [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) — `INDEXES` and `STATISTICS`. Distinguish symptoms, bottlenecks, and capacity constraints.
 - [ ] **Tuesday (1h):**
 
-  *Study:* Review Oracle `Using AWR` in [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) and SQL Server `What is blocking?` in [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/).
+  ***Study:*** Review Oracle `Using AWR` in [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) and SQL Server `What is blocking?` in [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/).
 
-  *Lab exercise:* Build the capacity worksheet using the [Week 7 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#capacity-worksheet).
+  ***Lab exercise:*** Build the capacity worksheet using the [Week 7 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#capacity-worksheet).
+
+  ***Project (0.25h of today's 1h):*** Add workload assumptions, baseline metrics, and capacity risks to the performance evidence pack.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* Review least privilege, auditing, vulnerability remediation, monitoring/diagnostic tools, and safe change practices using [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) — `Metrics, Event Histograms and Server-generated Alerts` and [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) — `DEADLOCKS` and `WAIT STATISTICS`.
+  ***Study:*** Review least privilege, auditing, vulnerability remediation, monitoring/diagnostic tools, and safe change practices using [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) — `Metrics, Event Histograms and Server-generated Alerts` and [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) — `DEADLOCKS` and `WAIT STATISTICS`.
 
-  *Lab exercise:* Create the map using the [Week 7 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#monitoring-and-security-control-map).
+  ***Lab exercise:*** Create the map using the [Week 7 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#monitoring-and-security-control-map).
+
+  ***Project (0.5h of today's 1.5h):*** Add the monitoring/security control map with ownership, signal, and escalation notes.
 - [ ] **Saturday (3h):**
 
-  *Study:* [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) — `Wait Events`/`Using AWR`; [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) — `WAIT STATISTICS`.
+  ***Study:*** [Oracle Database Performance Tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) — `Wait Events`/`Using AWR`; [SQL Server Performance Tuning Part 1](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) — `WAIT STATISTICS`.
 
-  *Lab exercise:* Complete the [read-only health check and RCA exercise](../labs/phase-01-enterprise-dba-bridge.md#week-7-performance-monitoring-automation-and-rca) using synthetic or authorized data.
+  ***Lab exercise:*** Complete the [read-only health check and RCA exercise](../labs/phase-01-enterprise-dba-bridge.md#week-7-performance-monitoring-automation-and-rca) using synthetic or authorized data.
+
+  ***Project (1h of today's 3h):*** Capture the read-only health-check output and build an evidence-based incident timeline and root-cause hypothesis.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* Revisit relevant [Oracle tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) and [SQL Server tuning](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) sections for evidence gathered.
+  ***Study:*** Revisit relevant [Oracle tuning](https://www.udemy.com/course/oracle-database-performance-tuning/) and [SQL Server tuning](https://www.udemy.com/course/sql-server-performance-tuning-part-1/) sections for evidence gathered.
 
-  *Lab exercise:* Write the operational standard and RCA report using the [Week 7 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#operational-standard-and-rca-report).
+  ***Lab exercise:*** Write the operational standard and RCA report using the [Week 7 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#operational-standard-and-rca-report).
+
+  ***Project (0.5h of today's 1.5h):*** Finish the operational standard, corrective actions, and RCA report; distinguish confirmed facts from hypotheses.
 
 **Deliverables:** Capacity worksheet, read-only automation, monitoring/security map, RCA and corrective-action record.  
 **Self-check:** Can you support each conclusion with measured or cited evidence and separate a contributing factor from the root cause?
@@ -261,29 +321,39 @@ Use about **1–2 hours of course/video material per week**; these courses are l
 
 - [ ] **Monday (1h):**
 
-  *Study:* Select a focused lesson from the linked [Week 1–7 course and walkthrough map](#course-and-walkthrough-map), such as [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) or [SQL Server Always On](https://www.udemy.com/course/sqlserverag/), that addresses the highest-ranked gap.
+  ***Study:*** Select a focused lesson from the linked [Week 1–7 course and walkthrough map](#course-and-walkthrough-map), such as [Oracle Database 19c Backup and Recovery](https://www.udemy.com/course/oracle-database-backup-and-recovery/) or [SQL Server Always On](https://www.udemy.com/course/sqlserverag/), that addresses the highest-ranked gap.
 
-  *Lab exercise:* Review the skills matrix and rank remaining gaps using the [Week 8 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#gap-ranking).
+  ***Lab exercise:*** Review the skills matrix and rank remaining gaps using the [Week 8 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#gap-ranking).
+
+  ***Project (0.25h of today's 1h):*** Select the integrated scenario and rank the evidence-pack gaps it should validate.
 - [ ] **Tuesday (1h):**
 
-  *Study:* Microsoft's [Always On overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) and [Oracle Data Guard documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/).
+  ***Study:*** Microsoft's [Always On overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) and [Oracle Data Guard documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/).
 
-  *Lab exercise:* Draft the cross-platform HA/DR decision matrix using the [Week 8 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#cross-platform-hadr-decision-matrix).
+  ***Lab exercise:*** Draft the cross-platform HA/DR decision matrix using the [Week 8 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#cross-platform-hadr-decision-matrix).
+
+  ***Project (0.25h of today's 1h):*** Add RPO/RTO, failover ownership, and recovery-validation criteria for each platform to the decision matrix.
 - [ ] **Thursday (1.5h):**
 
-  *Study:* Review [SQL Server Always On course material](https://www.udemy.com/course/sqlserverag/) and Microsoft's [Always On overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+  ***Study:*** Review [SQL Server Always On course material](https://www.udemy.com/course/sqlserverag/) and Microsoft's [Always On overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
-  *Lab exercise:* Prepare the change/migration plan and escalation scenario using the [Week 8 tabletop guide](../labs/phase-01-enterprise-dba-bridge.md#week-8-integrated-incident-tabletop).
+  ***Lab exercise:*** Prepare the change/migration plan and escalation scenario using the [Week 8 tabletop guide](../labs/phase-01-enterprise-dba-bridge.md#week-8-integrated-incident-tabletop).
+
+  ***Project (0.5h of today's 1.5h):*** Prepare the integrated change plan with approvals, rollback triggers, escalation roles, and stakeholder updates.
 - [ ] **Saturday (3h):**
 
-  *Study:* Use Microsoft's [Always On overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), [Oracle Data Guard documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/), or linked [SQL Server Always On course](https://www.udemy.com/course/sqlserverag/) for the selected scenario.
+  ***Study:*** Use Microsoft's [Always On overview](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server), [Oracle Data Guard documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/), or linked [SQL Server Always On course](https://www.udemy.com/course/sqlserverag/) for the selected scenario.
 
-  *Lab exercise:* Run the [90-minute integrated incident/recovery tabletop](../labs/phase-01-enterprise-dba-bridge.md#week-8-integrated-incident-tabletop), then finalize the operations pack. Treat mentorship as a scenario, not a claimed outcome.
+  ***Lab exercise:*** Run the [90-minute integrated incident/recovery tabletop](../labs/phase-01-enterprise-dba-bridge.md#week-8-integrated-incident-tabletop), then finalize the operations pack. Treat mentorship as a scenario, not a claimed outcome.
+
+  ***Project (1.5h of today's 3h):*** Execute the tabletop and assemble the final operations pack: decision matrix, runbooks, evidence labels, and technical briefing.
 - [ ] **Sunday (1.5h):**
 
-  *Study:* Revisit the [course and walkthrough map](#course-and-walkthrough-map), including [Oracle RMAN](https://www.udemy.com/course/oracle-database-backup-and-recovery/) and [SQL Server Always On](https://www.udemy.com/course/sqlserverag/) source material, for evidence needed in the runbooks and gap ranking.
+  ***Study:*** Revisit the [course and walkthrough map](#course-and-walkthrough-map), including [Oracle RMAN](https://www.udemy.com/course/oracle-database-backup-and-recovery/) and [SQL Server Always On](https://www.udemy.com/course/sqlserverag/) source material, for evidence needed in the runbooks and gap ranking.
 
-  *Lab exercise:* Complete the phase exit gate and retrospective using the [Week 8 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#phase-retrospective).
+  ***Lab exercise:*** Complete the phase exit gate and retrospective using the [Week 8 workbook procedure](../labs/phase-01-enterprise-dba-bridge.md#phase-retrospective).
+
+  ***Project (0.5h of today's 1.5h):*** Finalize the skills matrix, retrospective, and remaining experience-gap list; verify every claim is supported by labeled evidence.
 
 **Deliverables:** Enterprise DBA operations pack, final skills matrix, technical briefing, and phase retrospective.  
 **Self-check:** Can you explain platform-specific trade-offs, what you personally executed, what was simulated, and where you still need production experience?
